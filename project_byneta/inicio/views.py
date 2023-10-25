@@ -14,8 +14,10 @@ from django.http import HttpResponse
 
 
 def index(request):
-    datos={}
     
-    template_index = loader.get_template('index.html')
-    template_renderizado_index = template_index.render(datos)
-    return HttpResponse(template_renderizado_index)
+    
+    # template_index = loader.get_template('index.html')
+    # template_renderizado_index = template_index.render({})
+    # return HttpResponse(template_renderizado_index)
+    
+    return render(request, 'inicio/index.html', {})
