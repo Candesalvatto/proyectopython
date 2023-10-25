@@ -7,8 +7,8 @@ from inicio.views import index
 urlpatterns = [
     path('', include('inicio.urls')),
     path('manual', include('manual.urls')),
-    path('tienda', include('tienda.urls')),
-    path('cuenta', include('cuenta.urls')),
+    path('tienda/', include('tienda.urls')),
+    path('cuenta/', include('cuenta.urls')),
     # path('fecha', other_view),
     # path('saludo/<nombre>/<apellido>', saludo),
     # path('template', template),

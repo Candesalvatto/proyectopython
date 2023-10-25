@@ -4,7 +4,7 @@ from tienda.views import accesorios, brumas, autobronceantes
 
 
 urlpatterns = [
-    path('/brumas', brumas),
-    path('/accesorios', accesorios),
-    path('/autobronceantes', autobronceantes)
+    path('brumas', brumas),
+    path('accesorios', accesorios),
+    path('autobronceantes', autobronceantes)
 ]

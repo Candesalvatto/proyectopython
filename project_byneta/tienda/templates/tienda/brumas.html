@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+    {% load static %}
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Assistant&family=Eczar&family=Martian+Mono:wght@100&family=Montserrat:wght@200;400&family=Mulish:wght@300&family=Quicksand:wght@300&family=Roboto:wght@100&family=Satisfy&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./styles/styles.css">
+<link rel="stylesheet" type="text/css" href="{% static 'styles/styles.css' %}">
 
     <title>By Neta</title>
 </head>
@@ -26,7 +27,9 @@
                 </ul>
             </nav>
         </header>
+
         <h1>B r u m a s & G l o s s</h1>
+        
         <section class="productos">
             <div class="producto">
                 <img src="../../static/assets/imgs/bruma1.webp" alt="Producto 1">

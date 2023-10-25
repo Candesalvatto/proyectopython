@@ -6,7 +6,7 @@
 
 .header {
   width: 100%;
-  background-image: url(../imgs/banner3.jpg);
+  background-image: url(../assets/imgs/banner3.jpg);
   background-size: cover;
   height: 700px;
 }
