@@ -1,19 +1,44 @@
 {% extends 'store.html' %}
 
-
-{% block content %}
+{% comment %} MUESTRA MI PRODUCTO {% endcomment %}
+{% block content %}                    
 <section class="productos">
-    {% for producto in productos %}
-    <div class="producto">
-        <img src="../../static/assets/imgs/14-Aya-Wind_lilit_700x700.webp" alt="Producto 8">
-        <h3>{{ producto.nombre }}</h3>
-        <p>{{ producto.descripcion }}</p>
-        <span>$ {{ producto.precio }}</span>
-        <button>COMPRAR</button>
-    </div>
-    {% endfor %}
+   {% for producto in productos %}
+   <div class="producto">
+       <img src="../../static/assets/imgs/14-Aya-Wind_lilit_700x700.webp" alt="Producto 8">
+       <h3>{{ producto.nombre }}</h3>
+       <p>{{ producto.descripcion }}</p>
+       <span>$ {{ producto.precio }}</span>
+       <button>COMPRAR</button>
+   </div>
+   {% endfor %}
 </section>
+
+
+
+{% comment %} FORMULARIO PARA AGREGAR PRODUCTO {% endcomment %}
+<section class="crear-accesorio">
+    <h3> AGREGAR PRODUCTO</h3>
+    <form action="{% url 'agregar_accesorio' %}" method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            {{ form.nombre }}
+        </div>
+        <div class="form-group">
+            {{ form.descripcion }}
+        </div>
+        <div class="form-group">
+            {{ form.precio }}
+        </div>
+        <button type="submit" class="btn btn-primary">Guardar Producto</button>
+    </form>
+</section>
+
 {% endblock %}
+
+
+
+
 
 
 

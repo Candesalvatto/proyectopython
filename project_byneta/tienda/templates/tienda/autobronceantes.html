@@ -62,11 +62,15 @@
 </section>
 {% endblock productos_store %} {% endcomment %}
 
+
+
+
+{% comment %} MUESTRA MI PRODUCTO {% endcomment %}
 {% block content %}
 <section class="productos">
     {% for producto in productos %}
     <div class="producto">
-        <img src="../../static/tienda/assets/imgs/glow1_800x.webp" alt="Producto 8">
+        <img src="../../static/tienda/assets/imgs/faceandbody.webp" alt="Producto 8">
         <h3>{{ producto.nombre }}</h3>
         <p>{{ producto.descripcion }}</p>
         <span>$ {{ producto.precio }}</span>

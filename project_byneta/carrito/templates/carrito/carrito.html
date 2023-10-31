@@ -71,11 +71,13 @@
 </section>
 {% endblock %}
 
+<section class="buscar_carrito">
 <form action="{% url 'buscar_carrito' %}" method="GET">
-    <input type="text" name="producto" placeholder="Buscar"> 
     {{formulario_busqueda}}
-    <input type="submit" value="Buscar">
+    <button type="submit" class="btn btn-primary">BUSCAR</button>
  </form>
+</section>
+ 
 
 
 {% if productos_carrito %}
