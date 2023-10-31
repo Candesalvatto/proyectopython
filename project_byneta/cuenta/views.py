@@ -6,6 +6,7 @@ from cuenta.models import Cliente
 
 
 
+
 def registro(request):
     
     if request.method == 'POST':

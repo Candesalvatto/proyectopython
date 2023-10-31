@@ -15,6 +15,9 @@ class Cliente(models.Model):
     apellido= models.CharField(max_length=30)
     email=models.CharField(max_length=50)
     contrasena= models.IntegerField(max_length=20)
+    
+    def __str__(self):
+        return f'{self.id} - {self.nombre} - {self.apellido} - {self.email} - {self.contrasena}'
 
     
 

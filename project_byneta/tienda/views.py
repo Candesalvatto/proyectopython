@@ -5,8 +5,11 @@ from tienda.models import Producto
 
 
 
+
 def accesorios(request):    
-    return render(request, 'tienda/accesorios.html', {})
+    productos = Producto.objects.all()
+
+    return render(request, 'tienda/accesorios.html',{'productos': productos})
 
 def brumas(request):
     
@@ -15,6 +18,7 @@ def brumas(request):
 def autobronceantes(request):
     
     return render(request, 'tienda/autobronceantes.html', {})
+
 
 
 
