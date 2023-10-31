@@ -4,6 +4,6 @@ from cuenta.views import registro, loguin
 
 
 urlpatterns = [
-    path('registrar', registro),
-    path('ingresar', loguin)
+    path('registrar', registro, name='registro'),
+    path('ingresar', loguin, name='loguin')
 ]

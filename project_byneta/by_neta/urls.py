@@ -9,10 +9,6 @@ urlpatterns = [
     path('manual', include('manual.urls')),
     path('tienda/', include('tienda.urls')),
     path('cuenta/', include('cuenta.urls')),
-    # path('fecha', other_view),
-    # path('saludo/<nombre>/<apellido>', saludo),
-    # path('template', template),
-    # path('accesorios', accesorios),
-    # path('crear_auto/<str:marca>', crear_auto),
+    path('carrito', include('carrito.urls')),
     path('admin/', admin.site.urls),
 ]

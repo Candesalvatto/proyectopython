@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Assistant&family=Eczar&family=Martian+Mono:wght@100&family=Mulish:wght@300&family=Quicksand:wght@300&family=Roboto:wght@100&family=Satisfy&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link href="https://fonts.googleapis.com/css2?family=Assistant&family=Eczar&family=Martian+Mono:wght@100&family=Montserrat:wght@200;400&family=Mulish:wght@300&family=Quicksand:wght@300&family=Roboto:wght@100&family=Satisfy&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="{% static 'tienda/styles/styles.css' %}">
+
+    <title>By Neta</title>
+</head>
+<body>
+
+    <header class="header">
+        <nav class="nav">
+            <ul>
+                <li><a href= "{% url 'autobronceantes' %}">Autobronceado</a></li>
+                <li><a href= "{% url 'accesorios' %}">Accesorios</a></li>
+                <li class="logo"><a href= "{% url 'inicio' %}"><img src="../../static/assets/imgs/byneta_logo_black_800x.avif" alt="logo"></a></li>
+                <li><a href= "{% url 'brumas' %}">Brumas & Gloss </a></li>
+                <li><a href= "{% url 'manual' %}">Manual de uso</a></li>
+                <a href="{% url 'loguin' %}" title="Iniciar Sesion" class="material-symbols-outlined">person</a>
+                <a href= "{% url 'carrito' %}" title="Carrito" class="material-symbols-outlined">shopping_bag</a>
+            </ul>
+        </nav> 
+    </header>     
+        {% block titulo_tienda %}          
+        <h1>A c c e s o r i o s</h1>
+        {% endblock titulo_tienda %} 
+
+        {% block productos_store %}
+        <section class="productos">
+            
+
+                
+
+                
+            <div class="producto">
+                <img src="../../static/assets/imgs/684f2c3ea9c68a65b9ca92bf6c0a43f9_700x700.webp" alt="Producto 1">
+                <h3>DOUBLE BUBBLE</h3>
+                <p>2 esponjas Premium Beauty ¡Resultados perfectos con bases en crema, correctores líquidos, bronceadores, iluminadores, rubores y polvos fijadores! ¡Cubre uniformemente y se mezcla rápidamente!</p>
+                <span>$20.00</span>
+                <button>COMPRAR</button>
+            </div>
+            <div class="producto">
+                <img src="../../static/assets/imgs/Brush_5af3a0eb-d78c-41f4-844c-9cf61c2669d3_700x700.webp" alt="Producto 2">
+                <h3>BRUSH CRUSH</h3>
+                <p>Brocha de maquillaje diseñada específicamente con forma y textura perfectas para permitir una aplicación y control sin esfuerzo, para un acabado impecable. </p>
+                <span>$20.00</span>
+                <button>COMPRAR</button>
+            </div>
+            <div class="producto">
+                <img src="../../static/assets/imgs/d3c6b98d2709bd28d2303b18365528b2_700x700.webp" alt="Producto 3">
+                <h3>MAKE MY DAY</h3>
+                <p>Un neceser transparente de alta calidad que se cierra con cremallera. ¡Ideal para todas tus necesidades y productos de belleza y Defantley te alegrará el día!</p>
+                <span>$20.00</span>
+                <button>COMPRAR</button>
+            </div>
+            <div class="producto">
+                <img src="../../static/assets/imgs/XOXOBAG_700x700.webp" alt="Producto 4">
+                <h3>XOXO BAG</h3>
+                <p>Bolso bag transparente con detalles en dorado impermeable </p>
+                <span>$20.00</span>
+                <button>COMPRAR</button>
+            </div>
+            <div class="producto">
+                <img src="../../static/assets/imgs/IMG_3306_700x700.webp" alt="Producto 5">
+                <h3>BABE BAG</h3>
+                <p>Bolso tela resistente con diseño de la marca</p>
+                <span>$20.00</span>
+                <button>COMPRAR</button>
+            </div>
+            <div class="producto">
+                <img src="../../static/assets/imgs/Headband_d92efc29-5b7b-4a95-bdb3-9b2f66d1636e_700x700.webp" alt="Producto 6">
+                <h3>BANG BAND</h3>
+                <p>Banda blanca confeccionada en tejido de toalla de mimo, fácil de llevar y que te permite proteger tu cabello durante tu rutina de maquillaje, cuidado y autobronceador.</p>
+                <span>$20.00</span>
+                <button>COMPRAR</button>
+            </div>
+            <div class="producto">
+                <img src="../../static/assets/imgs/04-Aya-Wind_lilit_700x700.webp" alt="Producto 7">
+                <h3>BEAUTY POUCH</h3>
+                <p>Neceser de maquillaje azul claro</p>
+                <span>$20.00</span>
+                <button>COMPRAR</button>
+            </div>
+            <div class="producto">
+                <img src="../../static/assets/imgs/14-Aya-Wind_lilit_700x700.webp" alt="Producto 8">
+                <h3>BEAUTY POUCH L</h3>
+                <p>Neceser grande de maquillaje azul claro</p>
+                <span>$20.00</span>
+                <button>COMPRAR</button>
+            </div>
+
+
+            </section>
+            {% endblock productos_store %}
+            <section class="container_collage">
+                
+                {% block img_collage %}
+                    
+
+                    
+                <img src="../../static/assets/imgs/BeFunky-collage21.jpg" alt="">
+                {% endblock img_collage %}
+            </section>
+
+            <footer class="footer">
+                <div class="container_svg">
+                <img src="../../static/assets/imgs/estrella.png" alt="">
+                </div>
+                <h5 class="footer_h5"><a href= "{% url 'loguin' %}">ACCEDE A TU CUENTA PARA COMPRAR </a></h5>
+                <a href= "{% url 'registro' %}">¡Registrese ahora y empiece a disfrutar de nuestros productos!</a>
+                <span class="copy">Copyright 2023 || By Neta Beauty</span>
+            </footer> 
+
+</body>
+</html>

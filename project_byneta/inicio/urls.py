@@ -5,5 +5,5 @@ from inicio.views import index
 
 
 urlpatterns = [
-    path('', index)
+    path('', index, name='inicio')
 ]

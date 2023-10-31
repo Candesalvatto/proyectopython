@@ -1,14 +1,20 @@
-.header_loguin {
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.header {
   width: 100%;
   background-size: cover;
-  height: 300px;
+  height: 200px;
 }
-.header_loguin .nav {
+.header .nav {
   width: 100%;
   position: fixed;
   background-color: rgba(255, 255, 255, 0.4784313725);
 }
-.header_loguin .nav ul {
+.header .nav ul {
   display: flex;
   align-items: center;
   list-style: none;
@@ -16,13 +22,22 @@
   padding: 0;
   margin: 0;
 }
-.header_loguin .nav ul li {
+.header .nav ul a {
+  text-decoration: none;
+  color: #000;
+  padding-left: 20px;
+}
+.header .nav ul li {
   font-size: 2em;
   margin: 0 30px;
   font-family: "Montserrat", sans-serif;
   font-size: 1em;
 }
-.header_loguin .nav ul .logo img {
+.header .nav ul li a {
+  text-decoration: none;
+  color: #000;
+}
+.header .nav ul .logo img {
   width: 300px;
 }
 
@@ -32,6 +47,8 @@
   text-align: center;
   background-color: rgba(128, 128, 128, 0.164);
   padding-top: 30px;
+  display: flex;
+  flex-direction: column;
 }
 .footer .container_svg {
   width: 3%;
@@ -40,22 +57,56 @@
 .footer .container_svg img {
   width: 100%;
 }
-.footer h5 {
+.footer .footer_h5 {
   color: #B33E24;
   font-family: "Montserrat", sans-serif;
-  font-size: 2.2em;
+  font-size: 2em;
   font-weight: 900;
   margin-bottom: 30px;
+  text-decoration: none;
 }
-.footer p {
+.footer a {
   font-family: "Montserrat", sans-serif;
   font-size: 1em;
   font-weight: 600;
   margin-bottom: 100px;
+  text-decoration: none;
+  color: #000;
 }
 .footer span {
   font-family: "Montserrat", sans-serif;
   font-size: 0.8em;
+}
+
+.carrito {
+  border: 1px solid pink;
+  width: 100%;
+}
+.carrito .container_carrito {
+  width: 60%;
+  border: 1px solid green;
+  background-color: #b33e24;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+}
+.carrito .container_carrito .producto_carrito {
+  width: 50%;
+  border: 1px solid black;
+  background-color: #fff;
+  text-align: center;
+  margin: 20px auto;
+}
+.carrito .container_carrito .producto_carrito p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2em;
+  color: #000;
+  padding: 10px;
+}
+.carrito .container_carrito .producto_carrito buttom {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9em;
+  color: red;
 }
 
 .formulario {
@@ -68,14 +119,13 @@
 .formulario .div_formulario h1 {
   color: #000;
   font-size: 2em;
+  font-family: "Montserrat", sans-serif;
 }
 .formulario .div_formulario form {
   margin: 50px auto;
   display: flex;
   flex-direction: column;
-}
-.formulario .div_formulario form .inf {
-  height: 40px;
+  list-style: none;
 }
 .formulario .div_formulario form a {
   font-family: "Montserrat", sans-serif;
@@ -101,43 +151,22 @@
   color: #fff;
 }
 .formulario .div_formulario form input {
-  margin-top: 20px;
+  margin: 10px auto;
   font-family: "Montserrat", sans-serif;
+  font-size: 0.8em;
   padding-left: 10px;
+  list-style: none;
+  border: 1px solid #000;
+  width: 100%;
+  height: 40px;
 }
 .formulario .div_formulario form label {
   font-family: "Montserrat", sans-serif;
   font-size: 0.8em;
   color: #000;
   font-weight: 400;
-}
-
-.header_form {
-  width: 100%;
-  background-size: cover;
-  height: 300px;
-}
-.header_form .nav {
-  width: 100%;
-  position: fixed;
-  background-color: rgba(255, 255, 255, 0.4784313725);
-}
-.header_form .nav ul {
-  display: flex;
-  align-items: center;
   list-style: none;
-  justify-content: center;
-  padding: 0;
-  margin: 0;
-}
-.header_form .nav ul li {
-  font-size: 2em;
-  margin: 0 30px;
-  font-family: "Montserrat", sans-serif;
-  font-size: 1em;
-}
-.header_form .nav ul .logo img {
-  width: 300px;
+  margin: auto;
 }
 
 /*# sourceMappingURL=styles.css.map */
