@@ -35,12 +35,7 @@
         {% endblock titulo_tienda %} 
 
         {% block productos_store %}
-        <section class="productos">
-            
-
-                
-
-                
+        {% comment %} <section class="productos">         
             <div class="producto">
                 <img src="../../static/assets/imgs/684f2c3ea9c68a65b9ca92bf6c0a43f9_700x700.webp" alt="Producto 1">
                 <h3>DOUBLE BUBBLE</h3>
@@ -97,9 +92,16 @@
                 <span>$20.00</span>
                 <button>COMPRAR</button>
             </div>
+            </section> {% endcomment %}
 
 
-            </section>
+
+    {% block content %}
+
+    {% endblock content %}
+
+
+
             {% endblock productos_store %}
             <section class="container_collage">
                 

@@ -2,14 +2,17 @@
 
 
 {% block content %}
-  <h1>Productos</h1>
-  <ul>
+<section class="productos">
     {% for producto in productos %}
-      <li>{{ producto.nombre }}</li>
-      <li>{{ producto.descripcion }}</li>
-      <li>{{ producto.precio }}</li>
+    <div class="producto">
+        <img src="../../static/assets/imgs/14-Aya-Wind_lilit_700x700.webp" alt="Producto 8">
+        <h3>{{ producto.nombre }}</h3>
+        <p>{{ producto.descripcion }}</p>
+        <span>$ {{ producto.precio }}</span>
+        <button>COMPRAR</button>
+    </div>
     {% endfor %}
-  </ul>
+</section>
 {% endblock %}
 
 

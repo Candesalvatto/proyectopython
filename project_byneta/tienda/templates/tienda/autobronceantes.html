@@ -4,7 +4,7 @@
 {% endblock titulo_tienda %}
     
 
-{% block productos_store %}
+{% comment %} {% block productos_store %}
 <section class="productos_autob">
     <div class="producto">
         <img src="../../static/tienda/assets/imgs/medium.webp" alt="Producto 1">
@@ -60,110 +60,23 @@
         <button>COMPRAR</button>
     </div>
 </section>
-{% endblock productos_store %}
+{% endblock productos_store %} {% endcomment %}
+
+{% block content %}
+<section class="productos">
+    {% for producto in productos %}
+    <div class="producto">
+        <img src="../../static/tienda/assets/imgs/glow1_800x.webp" alt="Producto 8">
+        <h3>{{ producto.nombre }}</h3>
+        <p>{{ producto.descripcion }}</p>
+        <span>$ {{ producto.precio }}</span>
+        <button>COMPRAR</button>
+    </div>
+    {% endfor %}
+</section>
+{% endblock %}
 
 {% block img_collage %}
 <img src="../../static/tienda/assets/imgs/BeFunky-collage20.jpg" alt="">
 {% endblock img_collage %}
     
-<!-- 
- <!DOCTYPE html>
-<html lang="en">
-    {% load static %}
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Assistant&family=Eczar&family=Martian+Mono:wght@100&family=Mulish:wght@300&family=Quicksand:wght@300&family=Roboto:wght@100&family=Satisfy&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Assistant&family=Eczar&family=Martian+Mono:wght@100&family=Montserrat:wght@200;400&family=Mulish:wght@300&family=Quicksand:wght@300&family=Roboto:wght@100&family=Satisfy&display=swap" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="{% static 'tienda/styles/styles.css' %}">
-
-    <title>By Neta</title>
-</head>
-<body>
-
-        <header class="header">
-            <nav class="nav">
-                <ul>
-                    <li>Autobronceado</li>
-                    <li>Accesorios</li>
-                    <li class="logo"><img src="../../static/tienda/assets/imgs/byneta_logo_black_800x.avif" alt="logo"></li>
-                    <li>Brumas & Gloss</li>
-                    <li>Manual de uso</li>
-                </ul>
-            </nav>
-        </header>
-        <h1>B r o n c e a d o r e s</h1>
-        <section class="productos_autob">
-            <div class="producto">
-                <img src="../../static/tienda/assets/imgs/medium.webp" alt="Producto 1">
-                <h3>Leg Foundation</h3>
-                <p>Spray de maquillaje especial para piernas para una piel Beauty Filter suave y perfecta con tecnología. El maquillaje está enriquecido con un potente antioxidante y OIGOPEPTIDE 34 , un péptido que actúa para un aspecto uniforme de la piel y retrasa los efectos del envejecimiento.                </p>
-                <span>$20.00</span>
-                <button>COMPRAR</button>
-            </div>
-            <div class="producto">
-                <img src="../../static/tienda/assets/imgs/dark.webp" alt="Producto 2">
-                <h3>Tanning Body Mousse DARK</h3>
-                <p>La exclusiva tecnología Double Sun proporciona a la piel un doble resultado: un efecto inmediato de un bronceador suave (que se elimina en el primer lavado) y un bronceado impresionante que se fija durante 3-4 horas después de su uso. El bronceado permanecerá en tu piel durante unos 5 días y irá desapareciendo progresivamente. </p>
-                <span>$20.00</span>
-                <button>COMPRAR</button>
-            </div>
-            <div class="producto">
-                <img src="../../static/tienda/assets/imgs/face.webp" alt="Producto 3">
-                <h3>Face Foundation</h3>
-                <p>Spray de maquillaje facial con tecnología Beauty Filter. 
-                    Un spray de maquillaje para el rostro con una fórmula innovadora que unifica el aspecto de la piel, cubre manchas, rojeces e imperfecciones y crea un aspecto móvil, uniforme, saludable y radiante con cada reutilización.</p>
-                <span>$20.00</span>
-                <button>COMPRAR</button>
-            </div>
-            <div class="producto">
-                <img src="../../static/tienda/assets/imgs/faceandbody.webp" alt="Producto 4">
-                <h3>Self Tanning Spray</h3>
-                <p>
-                    Dale a tu piel un bronceado perfecto en un tono chocolate dorado y un aspecto natural, uniforme y luminoso. La fórmula está enriquecida con un potente péptido MATRIXYL que actúa contra el envejecimiento de la piel, con extracto calmante de aloe vera y una hidratación refrescante. </p>
-                <span>$20.00</span>
-                <button>COMPRAR</button>
-            </div>
-            <div class="producto">
-                <img src="../../static/tienda/assets/imgs/aceitebronceador.webp" alt="Producto 5">
-                <h3>MYKONOS DREAMS</h3>
-                <p>Aceite bronceador Velvet 15 SPF para broncearte en un tono bronce de ensueño.  La fórmula para mimar contiene una amplia variedad de aceites de lujo, incluidos aceite de nuez, aceite de maracuyá y aceite de jojoba, y está enriquecida con vitamina E y otros ingredientes que nutren y protegen su piel y crean una experiencia de bronceado perfecta</p>
-                <span>$20.00</span>
-                <button>COMPRAR</button>
-            </div>
-            <div class="producto">
-                <img src="../../static/tienda/assets/imgs/delete.webp" alt="Producto 6">
-                <h3>DELETE Self Tan</h3>
-                <p>Mousse para corregir y difuminar el exceso de tono provocado por BORRAR Borrador autobronceador
-                    AÑADIR AL CARRITO - NIS 79
-                    Mousse para corregir y difuminar el exceso de tono provocado por el uso de productos autobronceadores. La fórmula única suaviza tu piel y contiene aloe vera y manzanilla que nutren y dejan tu piel húmeda y con un tono uniforme. </p>
-                <span>$20.00</span>
-                <button>COMPRAR</button>
-            </div>
-            <div class="producto">
-                <img src="../../static/tienda/assets/imgs/glow1_800x.webp" alt="Producto 7">
-                <h3>Body Glow Bronze</h3>
-                <p>Un bronceador que aporta a la piel un aspecto bronceado, radiante y resplandeciente. Contiene delicados pigmentos en tonos naturales combinados con la innovadora tecnología de microperlas que aportan a la piel un tono bronceado con un acabado en movimiento acompañado de un brillo reluciente, aterciopelado y de ensueño. </p>
-                <span>$20.00</span>
-                <button>COMPRAR</button>
-            </div>
-        </section>
-
-        <section class="container_collage">
-            <img src="../../static/tienda/assets/imgs/BeFunky-collage20.jpg" alt="">
-        </section>
-
-        <footer class="footer">
-            <div class="container_svg">
-            <img src="../../static/tienda/assets/imgs/estrella.png" alt="">
-            </div>
-            <h5>ACCEDE A TU CUENTA PARA COMPRAR </h5>
-            <p>¡Registrese ahora y empiece a disfrutar de nuestros productos!</p>
-            <span class="copy">Copyright 2023 || By Neta Beauty</span>
-        </footer>
-</body>
-</html>  -->
