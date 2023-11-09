@@ -16,7 +16,7 @@
     <title>By Neta</title>
 </head>
 <body>
-    <header class="header_loguin">
+    <header class="header_perfil">
         <nav class="nav">
             <ul>
                 <li><a href= "{% url 'autobronceantes' %}">Autobronceado</a></li>
@@ -24,8 +24,8 @@
                 <li class="logo"><a href= "{% url 'inicio' %}"><img src="../../static/assets/imgs/byneta_logo_black_800x.avif" alt="logo"></a></li>
                 <li><a href= "{% url 'brumas' %}">Brumas & Gloss </a></li>
                 <li><a href= "{% url 'manual' %}">Manual de uso</a></li>
-                {% if request.user.is_authenticated %}   
-                <li><a href= "{% url 'editar_perfil' %}" title="Perfil" class="">{{request.user.username}} ♡ </a></li> 
+                {% if request.user.is_authenticated %} 
+                <li><a href= "{% url 'mi_perfil' %}" title="Perfil" class="">{{request.user.username}} ♡ </a></li>  
                 <a href="{% url 'cerrar_sesion' %}" title="Iniciar Sesion" class="material-symbols-outlined">logout</a>
                 <a href= "{% url 'carrito' %}" title="Carrito" class="material-symbols-outlined">shopping_bag</a>
                 {% else %}
@@ -36,24 +36,28 @@
     </header>
 
 
+    {% block perfil %}                    
+    <section class="mi_perfil">
+       <div class="container_perfil">
+        <h1>Mi perfil</h1>
+           <p>Usuario: {{ user.username }}</p>
+           <p>Nombre: {{ user.first_name }}</p>
+           <p>Apellido: {{ user.last_name }} </p>
+           <p>Email: {{ user.email }}</p>
+           <p>Direccion: {{ user.datosextra.direccion }}</p>
+           <p>Ciudad: {{ user.datosextra.ciudad }}</p>
+           <p>Pais: {{ user.datosextra.pais }}</p>
+           <p>Telefono: {{ user.datosextra.telefono }}</p>
+           <p>Avatar:
 
-{% block content%}
-<section class="formulario">
-<div class="div_formulario">
-    <h1>Registrarse</h1>
-    <form action="{% url 'registro' %}" method="POST"> 
-        {% csrf_token %}
-{{form.as_ul}}
-<button type="submit">ENVIAR</button>
-<a href= "{% url 'loguin' %}">¿Ya tienes una cuenta? Inicia sesión</a>
-    </form>
-</div> 
-</section>
-{% endblock %}
-    
-    
+             <img src="{{ request.user.datosextra.avatar.url }}"  alt="avatar">
 
+            </p>
+       </div>
+       <a href= "{% url 'editar_perfil' %}" title="Editar Perfil">¿Quieres editar tu perfil?</a>
     </section>
+    {% endblock %}
+
     <footer class="footer">
         <div class="container_svg">
         <img src="../../static/assets/imgs/estrella.png" alt="">

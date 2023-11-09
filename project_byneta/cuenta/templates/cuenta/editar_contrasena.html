@@ -24,8 +24,8 @@
                 <li class="logo"><a href= "{% url 'inicio' %}"><img src="../../static/assets/imgs/byneta_logo_black_800x.avif" alt="logo"></a></li>
                 <li><a href= "{% url 'brumas' %}">Brumas & Gloss </a></li>
                 <li><a href= "{% url 'manual' %}">Manual de uso</a></li>
-                {% if request.user.is_authenticated %}   
-                <li><a href= "{% url 'editar_perfil' %}" title="Perfil" class="">{{request.user.username}} ♡ </a></li> 
+                {% if request.user.is_authenticated %} 
+                <li><a href= "{% url 'mi_perfil' %}" title="Perfil" class="">{{request.user.username}} ♡ </a></li>  
                 <a href="{% url 'cerrar_sesion' %}" title="Iniciar Sesion" class="material-symbols-outlined">logout</a>
                 <a href= "{% url 'carrito' %}" title="Carrito" class="material-symbols-outlined">shopping_bag</a>
                 {% else %}
@@ -36,24 +36,22 @@
     </header>
 
 
-
-{% block content%}
+    {% block perfil %}
 <section class="formulario">
 <div class="div_formulario">
-    <h1>Registrarse</h1>
-    <form action="{% url 'registro' %}" method="POST"> 
+    <h1>Editar contraseña</h1>
+    <form action="{% url 'cambiar_contrasena' %}" method="POST"> 
         {% csrf_token %}
-{{form.as_ul}}
-<button type="submit">ENVIAR</button>
-<a href= "{% url 'loguin' %}">¿Ya tienes una cuenta? Inicia sesión</a>
+    {{form.as_ul}}
+<button type="submit">EDITAR </button>
     </form>
 </div> 
 </section>
-{% endblock %}
-    
-    
+{% endblock perfil %}
 
-    </section>
+
+
+
     <footer class="footer">
         <div class="container_svg">
         <img src="../../static/assets/imgs/estrella.png" alt="">

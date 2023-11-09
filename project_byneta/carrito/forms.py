@@ -8,3 +8,6 @@ class FormularioCarrito(forms.Form):         #formulario para class Cliente del 
     
 class BuscarProductoCarrito(forms.Form):
     producto = forms.CharField(max_length=50, required=False)
+    
+class EditarProductoCarrito(FormularioCarrito):        
+    ...

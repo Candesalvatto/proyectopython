@@ -38,106 +38,35 @@
             </nav> 
         </header>
 
-    <body> 
 
-        <h1><a href=" {% url 'crear-carrito' %}">Crear producto carrito</a> </h1>  
-{% comment %} formulario para ingresar productos al carrito {% endcomment %}
 
-        {% block content%}
+        <!-- {% block content%}
 <section class="formulario">
 <div class="div_formulario">
-    <h1>¿Qué producto deseas agregar al carrito?</h1>
+    <h1>EDITAR PRODUCTO </h1>
     <form action="" method="POST"> 
         {% csrf_token %}
-{% comment %} {{form.as_ul}} {% endcomment %}
+{% comment %} {{formulario_carrito.as_ul}} {% endcomment %}
 {{form}}
-<button type="submit">ENVIAR</button>
+
+<button type="submit">EDITAR</button>
     </form>
 </div> 
 </section>
-{% endblock %}
+{% endblock %} -->
 
-{% comment %} formulario para buscar productos {% endcomment %}
-
-<section class="buscar_carrito">
-<form action="{% url 'buscar_carrito' %}" method="GET">
-    {{formulario_busqueda}}
-    <button type="submit" class="btn btn-primary">BUSCAR</button>
- </form>
+{% block main%}
+<section class="formulario">
+<div class="div_formulario">
+   <h1>EDITAR PRODUCTO </h1>
+   <form method="post"> 
+       {% csrf_token %}
+       {{form.as_p}}
+       <button type="submit">EDITAR</button>
+   </form>
+</div> 
 </section>
- 
-
-{% comment %} mostrar productos del carrito {% endcomment %}
-
-
-{% comment %} {% if productos_carrito %}
-        
-<section class="carrito">
-    <div class="container_carrito">
-{% for producto in productos_carrito  %}
-<div class="producto_carrito">
-    <p>{{producto.producto}}</p>
-    <p>Cantidad: {{producto.cantidad}}</p>
-    <p>Precio: ${{producto.precio}}</p>
-    <a href=" {% url 'eliminar-carrito' producto.id %} ">Eliminar</a> <a href=" {% url 'editar-carrito' producto.id %} "> \Editar\</a>
-</div> {% endcomment %}
-
-
-{% comment %} eliminar {% endcomment %}
-
-{% comment %} {% block main %}
-<form action="" method="POST">
-    {% csrf_token %}
-    Desea eliminar el producto?{{producto.producto}}
-    <input type="submit" value="Confirmar Delete">
-</form>
-{% endblock main %} {% endcomment %}
-
-
-{% if productos_carrito %}
-   <section class="carrito">
-       <div class="container_carrito">
-           {% for producto in productos_carrito %}
-           <div class="producto_carrito">
-               <p>{{producto.producto}}</p>
-               <p>Cantidad: {{producto.cantidad}}</p>
-               <p>Precio: ${{producto.precio}}</p>
-               <form method="post" action="{% url 'eliminar-carrito' producto.id %}">
-                  {% csrf_token %}
-                  <input type="submit" value="Eliminar">
-               </form>
-               <a href="{% url 'editar-carrito' producto.id %}"> \Editar\</a>
-           </div>
-           {% endfor %}
-       </div>
-   </section>  
-{% else %}
-<p>No hay productos en su carrito.</p>
-{% endif %}
-
-
-{% block compras %}
-{% if productos_carrito %}
-<section class="carrito">
-    <div class="container_carrito">
-        <div class="producto_carrito">
-            <p>{{producto.producto}}</p>
-            <p>Cantidad: {{producto.cantidad}}</p>
-            <p>Precio: ${{producto.precio}}</p>
-            <form method="post" action="{% url 'carrito'  %}">
-                {% csrf_token %}
-                <input type="submit" value="Eliminar">
-             </form>
-        </div>
-    </div>
-</section>  
-{% else %}
-<p>---------NO HAY PRODUCTOS EN EL CARRITO.---------</p>
-{% endif %}
-{% endblock compras %}
-    
-
-
+{% endblock %}
 
 
 

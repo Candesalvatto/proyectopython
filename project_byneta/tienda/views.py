@@ -1,9 +1,8 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.template import loader
 from django.http import HttpResponse
 from tienda.models import ProductoAccesorios, ProductoAutobronceante, ProductoBruma
 from tienda.forms import FormularioAccesorios
-
 
 
 
@@ -25,22 +24,17 @@ def accesorios(request):
 
 
 
-def agregar_accesorio(request):
-    if request.method == 'POST':
-        form = FormularioAccesorios(request.POST)
-        if form.is_valid():
-            print("IS VALID")
-            nombre = form.cleaned_data['nombre']
-            descripcion = form.cleaned_data['descripcion']
-            precio = form.cleaned_data['precio']
-            producto = ProductoAccesorios(
-                nombre=nombre, descripcion=descripcion, precio=precio)
-            producto.save()
-            return redirect('accesorios')
-    else:
-        form = FormularioAccesorios()
 
-    return render(request, 'tienda/accesorios.html', {'form': form})
+
+def agregar_al_carrito(request):
+    producto_id = request.GET.get('producto_id')
+
+    return redirect('carrito')
+
+
+
+
+
 
 
 
