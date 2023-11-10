@@ -1,7 +1,8 @@
 from django.db import models
+from tienda.models import Producto
 
 class Carrito(models.Model):
-    producto = models.CharField(max_length=30)  #de models traeme charField, que va a ser caracteres
+    producto = models.ForeignKey(Producto, on_delete=models.CASCADE, default=1)
     precio = models.IntegerField()
     cantidad= models.IntegerField()
 

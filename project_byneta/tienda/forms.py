@@ -1,5 +1,5 @@
 from django import forms 
-from .models import ProductoAccesorios
+from .models import Producto
 
 # class FormularioAccesorios(forms.Form):         #formulario para class Cliente del models
 #     nombre = forms.CharField(label="", required=True, widget=forms.TextInput(attrs={'placeholder': 'Nombre del Producto'}))
@@ -13,15 +13,15 @@ from .models import ProductoAccesorios
 
 class FormularioAccesorios(forms.ModelForm):
     class Meta:
-        model = ProductoAccesorios
-        fields = ['nombre', 'descripcion', 'precio', 'imagen']
+        model = Producto
+        fields = [ 'nombre', 'descripcion', 'precio', 'imagen', 'cantidad', 'tipo']
     
 class FormularioAutobronceantes(forms.ModelForm):
     class Meta:
-        model = ProductoAccesorios
-        fields = ['nombre', 'descripcion', 'precio', 'imagen']
+        model = Producto
+        fields = [ 'nombre', 'descripcion', 'precio', 'imagen', 'cantidad', 'tipo']
         
 class FormularioBrumas(forms.ModelForm):
     class Meta:
-        model = ProductoAccesorios
-        fields = ['nombre', 'descripcion', 'precio', 'imagen']
+        model = Producto
+        fields = [ 'nombre', 'descripcion', 'precio', 'imagen', 'cantidad', 'tipo']

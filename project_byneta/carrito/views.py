@@ -13,10 +13,15 @@ from django.contrib.auth.decorators import login_required
 
 
 
-def carrito(request, producto_id): 
+# def carrito(request, producto_id): 
     
-        carrito_items = Carrito.objects.filter(usuario=request.user, id=producto_id)
-        return render(request, 'carrito/carrito.html', {'carrito_items': carrito_items})
+#         carrito_items = Carrito.objects.filter(usuario=request.user, id=producto_id)
+#         return render(request, 'carrito/carrito.html', {'carrito_items': carrito_items})
+    
+def carrito(request):
+    carrito = Carrito.objects.filter(usuario=request.user)
+    return render(request, 'carrito.html', {'carrito': carrito})
+
     
 @login_required   
 def ver_carrito(request):
@@ -91,15 +96,14 @@ def editar_carrito(request, producto_id):
 
 
 
+
+    
+    
+     #muestra formulario para crear producto carrito
 class ListaCarritoView(ListView):
     model = Carrito
     context_object_name = 'productos_carrito'
     template_name = "carrito/carrito.html"
-    
-    
-    
-     #muestra formulario para crear producto carrito
-
 
 class CarritoCreateView ( CreateView):        
     model = Carrito

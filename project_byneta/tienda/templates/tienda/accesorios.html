@@ -5,24 +5,25 @@
 <section class="productos">
    {% for producto in productos %}
    <div class="producto">
-    <form method="POST" action="{% url 'agregar_al_carrito' producto.id %}">
+    <form method="POST" action="{% url 'agregar_al_carrito' producto.id %}" class="form_producto" enctype="multipart/form-data">
         {% csrf_token %}
         <img src="../../static/assets/imgs/14-Aya-Wind_lilit_700x700.webp" alt="Producto 8"> 
        <h3>{{ producto.nombre }}</h3>
        <p>{{ producto.descripcion }}</p>
        <span>$ {{ producto.precio }}</span>
        <button type="submit">COMPRAR</button>
-   </div>
 </form>
-</section>
+</div>
 {% endfor %}
+</section>
+
 
 
 
 {% comment %} FORMULARIO PARA AGREGAR PRODUCTO {% endcomment %}
 <section class="crear-accesorio">
     <h3> AGREGAR PRODUCTO</h3>
-    <form action="" method="post">
+    {% comment %} <form action="" method="post" enctype="multipart/form-data">
         {% csrf_token %}
         <div class="form-group">
             {{ form.nombre }}
@@ -37,17 +38,15 @@
             {{ form.imagen }}
         </div>
         <button type="submit" class="btn btn-primary">Guardar Producto</button>
-    </form>
+    </form> {% endcomment %}
 
-    {% comment %} FORMULARIO CON IMAGEN {% endcomment %}
-<form action="{% url 'agregar_accesorio' %}" method="post" enctype="multipart/form-data">
+
+<form action="" method="POST" enctype="multipart/form-data">
     {% csrf_token %}
-    <h3> --------------------------------------2</h3>
     {{ form.as_p }}
     <button type="submit" class="btn btn-primary">Guardar Producto</button>
 </form>
-
-</section>
+</section> 
 
 {% endblock %}
 

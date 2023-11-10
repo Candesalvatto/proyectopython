@@ -26,6 +26,6 @@ class DatosExtra(models.Model):
    direccion = models.CharField(max_length=50)
    ciudad = models.CharField(max_length=50)
    pais = models.CharField(max_length=50)
-   telefono = models.IntegerField(max_length=50, null=True, blank=True)
+   telefono = models.IntegerField( null=True, blank=True)
    avatar = models.ImageField(upload_to='avatares', null=True, blank=True)
     

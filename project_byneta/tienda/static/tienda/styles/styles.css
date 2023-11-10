@@ -56,15 +56,13 @@ h1 {
   width: 90%;
   margin: 100px auto;
 }
-
 .productos .producto {
   padding: 10px;
   text-align: center;
   width: 80%;
   margin: 20px auto;
 }
-
-.productos .producto button {
+.productos .producto .form_producto button {
   width: 100%;
   background-color: transparent;
   border: 1px solid black;
@@ -76,85 +74,26 @@ h1 {
   font-weight: 900;
   margin-top: 10px;
 }
-
-.productos .producto button:hover {
+.productos .producto .form_producto button:hover {
   background-color: black;
   transition-duration: 0.8s;
   color: #fff;
 }
-
-.productos .producto h3 {
+.productos .producto .form_producto h3 {
   font-family: "Montserrat", sans-serif;
   font-size: 1.5em;
   margin-top: 10px;
 }
-
-.productos .producto p {
+.productos .producto .form_producto p {
   font-family: "Montserrat", sans-serif;
   font-size: 0.9em;
   margin: 10px 0 10px 0;
 }
-
-.productos .producto span {
+.productos .producto .form_producto span {
   font-family: "Montserrat", sans-serif;
   font-size: 1.3em;
 }
-
-.productos .producto img {
-  max-width: 100%;
-}
-
-.productos_autob {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  width: 70%;
-  margin: 100px auto;
-}
-
-.productos_autob .producto {
-  padding: 10px;
-  text-align: center;
-  width: 70%;
-  margin: 20px auto;
-}
-
-.productos_autob .producto button {
-  width: 100%;
-  background-color: transparent;
-  border: 1px solid black;
-  padding: 10px;
-  border-radius: 20px;
-  color: black;
-  font-family: "Montserrat", sans-serif;
-  font-size: 1em;
-  font-weight: 900;
-  margin-top: 10px;
-}
-
-.productos_autob .producto button:hover {
-  background-color: black;
-  transition-duration: 0.8s;
-  color: #fff;
-}
-
-.productos_autob .producto h3 {
-  font-family: "Montserrat", sans-serif;
-  font-size: 1.5em;
-  margin-top: 10px;
-}
-
-.productos_autob .producto p {
-  font-family: "Montserrat", sans-serif;
-  font-size: 0.9em;
-  margin: 10px 0 10px 0;
-}
-
-.productos_autob .producto span {
-  font-family: "Montserrat", sans-serif;
-  font-size: 1.3em;
-}
-
-.productos_autob .producto img {
+.productos .producto .form_producto img {
   max-width: 100%;
 }
 

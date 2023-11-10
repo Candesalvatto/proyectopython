@@ -77,6 +77,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'by_neta.wsgi.application'
+APPEND_SLASH = False
 
 
 # Database
