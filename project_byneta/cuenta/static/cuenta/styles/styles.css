@@ -281,6 +281,21 @@
   width: 80%;
   margin: 20px auto;
 }
+.detalle_producto .producto .form_eliminar_producto input {
+  color: red;
+  background-color: transparent;
+  border: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5em;
+  font-weight: 700;
+  margin-top: 30px;
+  cursor: pointer;
+  text-shadow: 2px 2px rgba(255, 0, 0, 0.185);
+  transition: transform 0.3s;
+}
+.detalle_producto .producto .form_eliminar_producto input:hover {
+  transform: scale(1.1);
+}
 .detalle_producto .producto .form_producto button {
   width: 100%;
   background-color: transparent;
@@ -320,6 +335,20 @@
   color: #000;
   font-family: "Montserrat", sans-serif;
   font-size: 1.3em;
+}
+
+.span {
+  width: 100%;
+}
+.span .div_span {
+  width: 80%;
+  margin: 0 auto 150px auto;
+}
+.span .div_span h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 3em;
+  color: #B33E24;
+  text-align: center;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.template import loader
 from django.http import HttpResponse
 from cuenta.forms import FormularioRegistrar, FormularioEdicionPerfil, FormularioEdicionContrasena
-from cuenta.models import Cliente, DatosExtra
+from cuenta.models import  DatosExtra
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
 from django.contrib.auth.views import PasswordChangeView
@@ -53,7 +53,7 @@ def loguin(request):
 
 def editar_perfil(request):
     datos_extra = request.user.datosextra
-    formulario = FormularioEdicionPerfil(instance = request.user, initial={'direccion': datos_extra.direccion,'ciudad': datos_extra.ciudad,'pais': datos_extra.pais,'telefono': datos_extra.telefono, 'avatar': datos_extra.avatar})
+    formulario = FormularioEdicionPerfil(instance = request.user, initial={'direccion': datos_extra.direccion,'ciudad': datos_extra.ciudad,'pais': datos_extra.pais,'telefono': datos_extra.telefono, 'avatar': datos_extra.avatar, 'fecha_nacimiento': datos_extra.fecha_nacimiento})
     if request.method == 'POST':
         formulario = FormularioEdicionPerfil(request.POST, request.FILES, instance=request.user)
         if formulario.is_valid():
@@ -62,6 +62,7 @@ def editar_perfil(request):
             nuevo_pais = formulario.cleaned_data.get('pais')
             nuevo_telefono = formulario.cleaned_data.get('telefono')
             nuevo_avatar = formulario.cleaned_data.get('avatar')
+            nueva_fecha_nacimiento = formulario.cleaned_data.get('fecha_nacimiento')
            
             if nueva_direccion:
                 datos_extra.direccion = nueva_direccion 
@@ -73,6 +74,8 @@ def editar_perfil(request):
                 datos_extra.telefono = nuevo_telefono
             if nuevo_avatar:
                 datos_extra.avatar = nuevo_avatar 
+            if nueva_fecha_nacimiento:
+                datos_extra.fecha_nacimiento = nueva_fecha_nacimiento 
 
                 
             

@@ -12,18 +12,19 @@ class Usuario(models.Model):
     
     
 
-class Cliente(models.Model):
-    nombre = models.CharField(max_length=30)  
-    apellido= models.CharField(max_length=30)
-    email=models.CharField(max_length=50)
-    contrasena= models.CharField(max_length=20)
+# class Cliente(models.Model):
+#     nombre = models.CharField(max_length=30)  
+#     apellido= models.CharField(max_length=30)
+#     email=models.CharField(max_length=50)
+#     contrasena= models.CharField(max_length=20)
     
-    def __str__(self):
-        return f'{self.id} - {self.nombre} - {self.apellido} - {self.email} - {self.contrasena}'
+#     def __str__(self):
+#         return f'{self.id} - {self.nombre} - {self.apellido} - {self.email} - {self.contrasena}'
 
     
 class DatosExtra(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
+    fecha_nacimiento = models.DateField(null=True, blank=True)
     direccion = models.CharField(max_length=50)
     ciudad = models.CharField(max_length=50)
     pais = models.CharField(max_length=50)
@@ -31,7 +32,7 @@ class DatosExtra(models.Model):
     avatar = models.ImageField(upload_to='avatares', null=True, blank=True)
    
     def __str__(self):
-        return f'{self.id} - {self.user} - {self.direccion} - {self.ciudad} - {self.pais} - {self.telefono} - {self.avatar}'
+        return f'{self.id} - {self.user} - {self.fecha_nacimiento} - {self.direccion} - {self.ciudad} - {self.pais} - {self.telefono} - {self.avatar}'
    
 
         

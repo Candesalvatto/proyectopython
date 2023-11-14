@@ -354,20 +354,26 @@ width: 40%;
 margin: -90px auto 30px auto;
 background-color: #F6F5FA;
 
-// form{width: 90%;
-// margin: auto;
-// border: 1px solid blue;
-// justify-content: center;
-// align-items: center;
-// text-align: center;
-
-// img{width: 400px;
-// }}
 .producto {
     padding: 10px;
     text-align: center;
     width: 80%;
     margin: 20px auto;
+
+    .form_eliminar_producto{
+        input{color: red;
+        background-color: transparent;
+    border: none;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.5em;
+font-weight: 700;
+margin-top: 30px;
+cursor: pointer;
+text-shadow: 2px 2px rgba(255, 0, 0, 0.185);
+transition: transform 0.3s;
+
+    &:hover{transform: scale(1.1);}}
+    }
 
     .form_producto {
       button {
@@ -417,5 +423,18 @@ background-color: #F6F5FA;
 
     }
   }
+}
+
+
+.span{
+
+    width: 100%;
+    .div_span{width: 80%;
+margin: 0 auto 150px auto;
+
+h1{font-family: 'Montserrat', sans-serif;
+    font-size: 3em;
+    color: #B33E24;
+text-align: center;}}
 }
 

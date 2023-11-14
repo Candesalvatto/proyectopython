@@ -1,6 +1,7 @@
 from django import forms 
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm, PasswordChangeForm
 from django.contrib.auth.models import User
+from django.forms.widgets import SelectDateWidget
 
 class FormularioRegistrar(UserCreationForm):         #formulario para class Cliente del models
     username = forms.CharField(label="", required=True, widget=forms.TextInput(attrs={'placeholder': 'Nombre de Usuario'}))
@@ -20,6 +21,7 @@ class FormularioEdicionPerfil(UserChangeForm):
     email = forms.EmailField(label="",  required=False,widget=forms.TextInput(attrs={'placeholder': 'Email'}))
     first_name = forms.CharField(label="", required=False, widget=forms.TextInput(attrs={'placeholder': 'Nombre'}))
     last_name = forms.CharField(label="", required=False, widget=forms.TextInput(attrs={'placeholder': 'Apellido'}))
+    fecha_nacimiento = forms.DateField(label="", required=False, widget=SelectDateWidget(attrs={'placeholder': 'Fecha de Nacimiento'}, years=range(1950, 2024)))
     direccion = forms.CharField(label="", required=False, widget=forms.TextInput(attrs={'placeholder': 'Dirección'}))
     ciudad = forms.CharField(label="", required=False, widget=forms.TextInput(attrs={'placeholder': 'Ciudad'}))
     pais = forms.CharField(label="", required=False, widget=forms.TextInput(attrs={'placeholder': 'País'}))
@@ -28,7 +30,7 @@ class FormularioEdicionPerfil(UserChangeForm):
     
     class Meta:
         model = User
-        fields = ['username', 'email', 'first_name', 'last_name', 'direccion', 'ciudad', 'pais', 'telefono', 'avatar']
+        fields = ['username', 'email', 'first_name', 'last_name','fecha_nacimiento', 'direccion', 'ciudad', 'pais', 'telefono', 'avatar']
         
         
 class FormularioEdicionContrasena(PasswordChangeForm):

@@ -15,7 +15,7 @@
                    <a href="{% url 'editar_producto' producto.id  %}">EDITAR PRODUCTO</a><br><br>
                    {% endif %}
                    {% with url_productos as url %}
-    <a href="{% url url %}">Volver</a>
+    <a href="{% url url_productos %}">Volver</a>
 {% endwith %}
             </form>
 

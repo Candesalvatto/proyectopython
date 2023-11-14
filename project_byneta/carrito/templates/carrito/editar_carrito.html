@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{% comment %} <!DOCTYPE html>
 <html lang="en">
     {% load static %}
 
@@ -36,7 +36,7 @@
                     <a href= "{% url 'carrito' %}" title="Carrito" class="material-symbols-outlined">shopping_bag</a>
                 </ul>
             </nav> 
-        </header>
+        </header> {% endcomment %}
 
 
 
@@ -55,7 +55,7 @@
 </section>
 {% endblock %} -->
 
-{% block main%}
+{% comment %} {% block main%}
 <section class="formulario">
 <div class="div_formulario">
    <h1>EDITAR PRODUCTO </h1>
@@ -84,4 +84,4 @@
         </footer> 
 
 </body>
-</html>
+</html> {% endcomment %}

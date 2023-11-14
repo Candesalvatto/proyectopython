@@ -3,43 +3,6 @@
 <h1>B r u m a s & G l o s s</h1>
 {% endblock titulo_tienda %}
 
-{% comment %} 
-{% block productos_store%}
-<section class="productos">
-<div class="producto">
-    <img src="../../static/assets/imgs/bruma1.webp" alt="Producto 1">
-    <h3>PARTY IN IBIZA NIGHT MIST</h3>
-    <p>Un spray de noche para cuerpo piel y cabello con una fragancia femenina y adictiva inspirada en las fiestas más rutilantes de las últimas vacaciones en Ibiza. La refinada fórmula nutre la piel y el cabello con humedad, no mancha la ropa y mantiene la sensualidad de la fragancia durante toda la noche.</p>
-    <span>$20.00</span>
-    <button>COMPRAR</button>
-</div>
-<div class="producto">
-    <img src="../../static/assets/imgs/bruma2.webp" alt="Producto 2">
-    <h3>MORNING IN LA DAY MIST</h3>
-    <p>Un spray de día para la piel del cuerpo y el cabello con una fragancia fresca y adictiva inspirada en las fragancias de las boutiques de Los Ángeles. La fórmula refinada nutre la piel y el cabello con humedad, no mancha la ropa y mantiene la fragancia fresca durante todo el día </p>
-    <span>$20.00</span>
-    <button>COMPRAR</button>
-</div>
-<div class="producto">
-    <img src="../../static/assets/imgs/brumacombo.webp" alt="Producto 3">
-    <h3>Morning in L.A + Party in Ibiza</h3>
-    <p>El combo que necesitabas para lucir siempre con fragancias para todo tipo de ocación. Dejando una estela de aroma a tu paso, siempre luciendo fragancias en tu piel para sentirte refrescante y espléndida.</p>
-    <span>$20.00</span>
-    <button>COMPRAR</button>
-</div>
-
-<div class="producto">
-    <img src="../../static/assets/imgs/glosslipproduct.webp" alt="Producto 5">
-    <h3>I'M OBSESSED Juicy Lip Oil</h3>
-    <p>El aceite labial nutre una apariencia carnosa, jugosa y brillante. Una mezcla de aceites de lujo que nutren tus labios, brindándoles una hidratación profunda y calmante para una apariencia jugosa y brillante con cada reutilización.</p>
-    <span>$20.00</span>
-    <button>COMPRAR</button>
-</div>
-</section>
-{% endblock productos_store %} {% endcomment %}
-
-
-
 
 
 {% comment %} MUESTRA MI PRODUCTO {% endcomment %}
@@ -59,14 +22,15 @@
  {% endfor %}
  </section>
 
- {% if  request.user.is_superuser %}
+ {% comment %} FORMULARIO PARA AGREGAR PRODUCTO {% endcomment %}
+{% if  request.user.is_superuser %}
 
- <section class="crear-accesorio">
-    <h3> AGREGAR PRODUCTO</h3>
-<form action="" method="POST" enctype="multipart/form-data">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit" class="btn btn-primary">Guardar Producto</button>
+<section class="crear-accesorio">
+   <h3> AGREGAR PRODUCTO</h3>
+<form action="{% url 'agregar_producto' %}" method="POST" enctype="multipart/form-data">
+   {% csrf_token %}
+   {{ form.as_p }}
+   <button type="submit" class="btn btn-primary">Guardar Producto</button>
 </form>
 </section> 
 {% endif %}

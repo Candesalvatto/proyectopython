@@ -22,7 +22,7 @@
                 <li><a href= "{% url 'about_me' %}">Acerca de mi</a></li>
                 <li><a href= "{% url 'autobronceantes' %}">Autobronceado</a></li>
                 <li><a href= "{% url 'accesorios' %}">Accesorios</a></li>
-                <li class="logo"><a href= "{% url 'inicio' %}"><img src="../../static/inicio/assets/imgs/byneta_logo_black_800x.avif" alt="logo"></a></li>
+                <li class="logo"><a href= "{% url 'inicio' %}"><img src="../inicio/static/inicio/assets/imgs/byneta_logo_black_800x.avif" alt="logo"></a></li>
                 <li><a href= "{% url 'brumas' %}">Brumas & Gloss </a></li>
                 <li><a href= "{% url 'manual' %}">Manual de uso</a></li>
                 {% if request.user.is_authenticated %} 
@@ -43,7 +43,7 @@
         
     <footer class="footer">
         <div class="container_svg">
-        <img src="../../static/inicio/assets/imgs/estrella.png" alt="">
+        <img src="../inicio/static/inicio/assets/imgs/estrella.png" alt="logo">
         </div>
         <h5 class="footer_h5"><a href= "{% url 'loguin' %}">ACCEDE A TU CUENTA PARA COMPRAR </a></h5>
         <a href= "{% url 'registro' %}">¡Registrese ahora y empiece a disfrutar de nuestros productos!</a>

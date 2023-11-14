@@ -98,13 +98,9 @@ class ProductoUpdateView(UpdateView):
     model = Producto
     template_name = "tienda/editar_producto.html"
     fields = ['nombre', 'descripcion', 'precio', 'imagen', 'cantidad', 'tipo']
-    success_url = reverse_lazy('tienda')
+    success_url = reverse_lazy('inicio')
     
-# class ProductoDeleteView(DeleteView):
-#     model = Producto
-#     template_name = "tienda/eliminar_producto.html"
-#     success_url = reverse_lazy('eliminar_producto')
-    
+
 
 
 
