@@ -1,10 +1,11 @@
 from django import forms 
 from .models import Producto
+from ckeditor.fields import RichTextFormField
 
 
 class FormularioProducto(forms.ModelForm):
     nombre = forms.CharField(label="", required=True, widget=forms.TextInput(attrs={'placeholder': 'Nombre del Producto'}))
-    descripcion = forms.CharField(label="", required=True, widget=forms.TextInput(attrs={'placeholder': 'Descripción'}))
+    descripcion = RichTextFormField()
     precio = forms.DecimalField(label="", required=True, widget=forms.TextInput(attrs={'placeholder': 'Precio'}))
     imagen = forms.ImageField(label="", required=True, widget=forms.ClearableFileInput(attrs={'placeholder': 'Seleccionar Imagen'}))
     cantidad = forms.IntegerField(label="", required=True, widget=forms.TextInput(attrs={'placeholder': 'Cantidad'}))
@@ -15,7 +16,7 @@ class FormularioProducto(forms.ModelForm):
         help_texts = {key: '' for key in fields}
 class FormularioAccesorios(forms.ModelForm):    
     nombre = forms.CharField(label="", required=True, widget=forms.TextInput(attrs={'placeholder': 'Nombre del Producto'}))
-    descripcion = forms.CharField(label="", required=True, widget=forms.TextInput(attrs={'placeholder': 'Descripción'}))
+    descripcion = RichTextFormField()
     precio = forms.DecimalField(label="", required=True, widget=forms.TextInput(attrs={'placeholder': 'Precio'}))
     imagen = forms.ImageField(label="", required=True, widget=forms.ClearableFileInput(attrs={'placeholder': 'Seleccionar Imagen'}))
     cantidad = forms.IntegerField(label="", required=True, widget=forms.TextInput(attrs={'placeholder': 'Cantidad'}))
@@ -27,7 +28,7 @@ class FormularioAccesorios(forms.ModelForm):
     
 class FormularioAutobronceantes(forms.ModelForm):
     nombre = forms.CharField(label="", required=True, widget=forms.TextInput(attrs={'placeholder': 'Nombre del Producto'}))
-    descripcion = forms.CharField(label="", required=True, widget=forms.TextInput(attrs={'placeholder': 'Descripción'}))
+    descripcion = RichTextFormField()
     precio = forms.DecimalField(label="", required=True, widget=forms.TextInput(attrs={'placeholder': 'Precio'}))
     imagen = forms.ImageField(label="", required=True, widget=forms.ClearableFileInput(attrs={'placeholder': 'Seleccionar Imagen'}))
     cantidad = forms.IntegerField(label="", required=True, widget=forms.TextInput(attrs={'placeholder': 'Cantidad'}))
@@ -39,7 +40,7 @@ class FormularioAutobronceantes(forms.ModelForm):
         
 class FormularioBrumas(forms.ModelForm):
     nombre = forms.CharField(label="", required=True, widget=forms.TextInput(attrs={'placeholder': 'Nombre del Producto'}))
-    descripcion = forms.CharField(label="", required=True, widget=forms.TextInput(attrs={'placeholder': 'Descripción'}))
+    descripcion = RichTextFormField()
     precio = forms.DecimalField(label="", required=True, widget=forms.TextInput(attrs={'placeholder': 'Precio'}))
     imagen = forms.ImageField(label="", required=True, widget=forms.ClearableFileInput(attrs={'placeholder': 'Seleccionar Imagen'}))
     cantidad = forms.IntegerField(label="", required=True, widget=forms.TextInput(attrs={'placeholder': 'Cantidad'}))

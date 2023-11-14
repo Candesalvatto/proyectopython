@@ -1,16 +1,18 @@
 {% extends 'template.html' %}
 
-{% block contenido%}
+{% block contenido %}
 <section class="span">
-<div class="div_span">
-    
-    {% if not messages %}             
-   <h1>EL PRODUCTO "{{producto.nombre|upper}}" HA SIDO ELIMINADO</h1>
-   {% else %}
-   <h1>EL PRODUCTO NO SE HA ELIMINADO, INTENTE OTRA VEZ</h1>
-   {% endif %}
-
-</div> 
-
+    <div class="div_span">
+        {% if messages %}
+            {% for message in messages %}
+                {% if 'editado' in message.tags %}
+                    <div class="alert-success">
+                        {{ message }}
+                    </div>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    </div> 
 </section>
 {% endblock contenido %}
+

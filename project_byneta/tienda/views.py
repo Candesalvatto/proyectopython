@@ -7,6 +7,7 @@ from django.http import HttpResponse
 from tienda.models import Producto
 from tienda.forms import FormularioAccesorios, FormularioAutobronceantes, FormularioBrumas, FormularioProducto
 from carrito.models import Carrito
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 
 
@@ -35,14 +36,23 @@ def editar_producto(request, producto_id):
 
 def eliminar_producto(request, producto_id):   
     producto = Producto.objects.get(id=producto_id)
+    mensaje = messages
     if request.method == 'POST':
         producto.delete()
         print('----el producto ha sido eliminado------')
+        if producto.tipo == 'bruma':
+            url_productos = 'brumas'
+        elif producto.tipo == 'accesorio':
+            url_productos = 'accesorios'
+        else:
+            producto.tipo = 'autobronceante'
+            url_productos = 'autobronceantes'
+        return redirect(url_productos)
     else:
         print('-----vuelva a intentarlo-----')
-        return redirect('eliminar_producto', producto_id=producto_id)
 
     return render(request, 'tienda/eliminar_producto.html', {'producto': producto})
+
 
 
 def detalle_producto(request, producto_id):   
@@ -60,6 +70,9 @@ def detalle_producto(request, producto_id):
 
 
 def agregar_al_carrito(request, producto_id):
+    if not request.user.is_authenticated:
+        return redirect('loguin')
+    
     producto = Producto.objects.get(id=producto_id)
     print(producto)
     carrito, creado = Carrito.objects.get_or_create(
@@ -94,11 +107,18 @@ def agregar_producto(request):
 
 
     
-class ProductoUpdateView(UpdateView):
+class ProductoUpdateView(LoginRequiredMixin, UpdateView):
     model = Producto
     template_name = "tienda/editar_producto.html"
     fields = ['nombre', 'descripcion', 'precio', 'imagen', 'cantidad', 'tipo']
-    success_url = reverse_lazy('inicio')
+
+    
+    def form_valid(self, form):
+        producto = form.save()
+        span = messages
+        print('------producto editado----------')
+        span.success(self.request, '¡EL PRODUCTO HA SIDO EDITADO SATISFACTORIAMENTE!', extra_tags='editado')
+        return redirect('eliminar_producto', producto_id=producto.id)
     
 
 

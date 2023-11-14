@@ -1,4 +1,8 @@
 asgiref==3.7.2
 Django==4.2.6
+django-ckeditor==6.7.0
+django-js-asset==2.1.0
+paquete-candela @ file:///C:/Users/User/Desktop/pythonproject/segunda_entrega/dist/paquete_candela-0.0.1.tar.gz#sha256=e0627fbe75a67319cf48a2ec16a7e54a8dbec4aaaa7445e5ac43b61226f0ddfd
+Pillow==10.1.0
 sqlparse==0.4.4
 tzdata==2023.3

@@ -45,7 +45,8 @@ INSTALLED_APPS = [
     'tienda',
     'cuenta',
     'manual',
-    'carrito'
+    'carrito',
+    'ckeditor'
 ]
 
 MIDDLEWARE = [

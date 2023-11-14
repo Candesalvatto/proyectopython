@@ -114,6 +114,18 @@
         width: 50%;
         margin: auto;
 
+
+        a{color: black;
+            font-size: 1.5em;
+            font-family: 'Montserrat', sans-serif;
+            text-align: center;
+            margin: auto;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            width: 20%;
+        }
+
         h1 {
             color: #000;
             font-size: 2em;
@@ -427,12 +439,14 @@ transition: transform 0.3s;
 
 
 .span{
+    
 
     width: 100%;
+
     .div_span{width: 80%;
 margin: 0 auto 150px auto;
 
-h1{font-family: 'Montserrat', sans-serif;
+.alert-success{font-family: 'Montserrat', sans-serif;
     font-size: 3em;
     color: #B33E24;
 text-align: center;}}

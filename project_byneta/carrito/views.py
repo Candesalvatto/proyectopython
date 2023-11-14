@@ -7,6 +7,7 @@ from django.views.generic import ListView, CreateView, DeleteView, UpdateView
 from django.urls import reverse_lazy
 from django.contrib.auth.decorators import login_required
 from datetime import date
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 
 @login_required   
@@ -15,9 +16,9 @@ def carrito(request):
     formulario_busqueda = BuscarProductoCarrito()
 
     
-    return render(request, 'carrito.html', {'carrito': carrito, 'fecha': date.today(), 'formulario_busqueda': formulario_busqueda})
+    return render(request, 'carrito/carrito.html', {'carrito': carrito, 'fecha': date.today(), 'formulario_busqueda': formulario_busqueda})
 
-
+@login_required   
 def buscar_carrito(request):
     formulario_busqueda = BuscarProductoCarrito(request.GET)
     listado_de_productos = []
@@ -34,7 +35,7 @@ def buscar_carrito(request):
 
 
 
-     #muestra formulario para crear producto carrito
+
 class ListaCarritoView(ListView):
     model = Carrito
     context_object_name = 'productos_carrito'
@@ -43,7 +44,7 @@ class ListaCarritoView(ListView):
    
     #elimina producto del carrito
 
-class CarritoDeleteView(DeleteView):
+class CarritoDeleteView(LoginRequiredMixin, DeleteView):
     model = Carrito
     template_name = "carrito/carrito.html"
     success_url = reverse_lazy('carrito')

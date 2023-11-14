@@ -84,6 +84,17 @@
   width: 50%;
   margin: auto;
 }
+.formulario .div_formulario a {
+  color: black;
+  font-size: 1.5em;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 20%;
+}
 .formulario .div_formulario h1 {
   color: #000;
   font-size: 2em;
@@ -344,7 +355,7 @@
   width: 80%;
   margin: 0 auto 150px auto;
 }
-.span .div_span h1 {
+.span .div_span .alert-success {
   font-family: "Montserrat", sans-serif;
   font-size: 3em;
   color: #B33E24;

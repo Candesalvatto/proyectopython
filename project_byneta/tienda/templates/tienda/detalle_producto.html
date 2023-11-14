@@ -8,7 +8,7 @@
                     {% csrf_token %}
                     <img src="{{producto.imagen.url}}" alt="Producto">
                    <h3>{{ producto.nombre }}</h3>
-                   <p>{{producto.descripcion}}</p>
+                   <p>{{producto.descripcion | safe}}</p>
                    <span>$ {{ producto.precio }}</span>
                    <button type="submit">COMPRAR</button>
                    {% if  request.user.is_superuser %}
