@@ -1,0 +1,14 @@
+{% extends 'template.html' %}
+
+{% block contenido%}
+<section class="formulario">
+<div class="div_formulario">
+   <h1>EDITAR PRODUCTO </h1>
+   <form method="post"> 
+       {% csrf_token %}
+       {{form.as_p}}
+       <button type="submit">EDITAR</button>
+   </form>
+</div> 
+</section>
+{% endblock %}

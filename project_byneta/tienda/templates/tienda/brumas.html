@@ -47,18 +47,36 @@
 <section class="productos">
     {% for producto in productos %}
     <div class="producto">
-        <img src="../../static/assets/imgs/glosslipproduct.webp" alt="Producto 8">
-        <h3>{{ producto.nombre }}</h3>
-        <p>{{ producto.descripcion }}</p>
-        <span>$ {{ producto.precio }}</span>
-        <button>COMPRAR</button>
-    </div>
-    {% endfor %}
-</section>
+        <form method="POST" action="{% url 'agregar_al_carrito' producto.id %}" class="form_producto" enctype="multipart/form-data">
+            {% csrf_token %}
+            <img src="{{producto.imagen.url}}" alt="Producto">
+           <h3>{{ producto.nombre }}</h3>
+           <span>$ {{ producto.precio }}</span>
+           <button type="submit">COMPRAR</button>
+        <a href="{% url 'detalle_producto' producto.id  %}">Ver detalle</a>
+    </form>
+ </div>
+ {% endfor %}
+ </section>
+
+ {% if  request.user.is_superuser %}
+
+ <section class="crear-accesorio">
+    <h3> AGREGAR PRODUCTO</h3>
+<form action="" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary">Guardar Producto</button>
+</form>
+</section> 
+{% endif %}
+
 {% endblock %}
 
+
+
 {% block img_collage %}
-<img src="../../static/assets/imgs/BeFunky-collage19.jpg" alt="">
+<img src="../../static/tienda/assets/imgs/BeFunky-collage19.jpg" alt="">
 {% endblock img_collage %}
     
     

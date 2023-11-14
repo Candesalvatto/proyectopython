@@ -6,7 +6,7 @@
 
 .header_loguin {
   width: 100%;
-  height: 300px;
+  height: 200px;
 }
 .header_loguin .nav {
   width: 100%;
@@ -166,37 +166,61 @@
 }
 
 .mi_perfil {
-  margin: -600px 0px 30px auto;
-  width: 50%;
+  margin: auto;
+  width: 70%;
   display: flex;
   flex-direction: column;
 }
-.mi_perfil a {
+.mi_perfil .titulo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.mi_perfil .titulo h1 {
+  color: #000;
+  margin: 0;
+  font-size: 4em;
+  font-family: "Montserrat", sans-serif;
+}
+.mi_perfil .titulo a {
+  align-items: center;
+  justify-content: right;
   padding: 10px 50px;
   font-family: "Montserrat", sans-serif;
-  font-size: 1.5em;
-  text-decoration: none;
+  font-size: 1em;
   font-weight: 600;
   color: #000;
   margin: 30px 0px;
 }
-.mi_perfil a:hover {
-  transition-duration: 0.3s;
-  color: #B33E24;
+.mi_perfil .button {
+  padding: 10px 50px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1em;
+  color: #fff;
+  background-color: #000;
+  border-radius: 20px;
+  width: 20%;
+  margin: 30px auto;
+  text-decoration: none;
 }
 .mi_perfil .container_perfil {
   margin: 50px auto;
   width: 100%;
 }
-.mi_perfil .container_perfil h1 {
+.mi_perfil .container_perfil .hr {
+  margin-top: 10px;
+  border-color: #000;
+}
+.mi_perfil .container_perfil h2 {
   color: #000;
-  font-size: 2em;
+  margin: 0;
+  margin-top: 30px;
+  font-size: 1.8em;
   font-family: "Montserrat", sans-serif;
-  margin: 0px auto 50px auto;
 }
 .mi_perfil .container_perfil p {
   font-family: "Montserrat", sans-serif;
-  font-size: 1.3em;
+  font-size: 1.1em;
   color: #000;
   font-weight: 800;
   margin: 20px auto;
@@ -212,10 +236,7 @@
 
 .header_perfil {
   width: 100%;
-  height: 700px;
-  background-image: url(../assets/imgs/ByNetaDay2_6733_800x.webp);
-  background-repeat: no-repeat;
-  background-size: contain;
+  height: 200px;
 }
 .header_perfil .nav {
   width: 100%;
@@ -247,6 +268,58 @@
 }
 .header_perfil .nav ul .logo img {
   width: 300px;
+}
+
+.detalle_producto {
+  width: 40%;
+  margin: -90px auto 30px auto;
+  background-color: #F6F5FA;
+}
+.detalle_producto .producto {
+  padding: 10px;
+  text-align: center;
+  width: 80%;
+  margin: 20px auto;
+}
+.detalle_producto .producto .form_producto button {
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 20px;
+  color: black;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1em;
+  font-weight: 900;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+.detalle_producto .producto .form_producto button:hover {
+  background-color: black;
+  transition-duration: 0.8s;
+  color: #fff;
+}
+.detalle_producto .producto .form_producto h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5em;
+  margin-top: 10px;
+}
+.detalle_producto .producto .form_producto p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9em;
+  margin: 10px 0 10px 0;
+}
+.detalle_producto .producto .form_producto span {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.3em;
+}
+.detalle_producto .producto .form_producto img {
+  max-width: 400px;
+}
+.detalle_producto .producto .form_producto a {
+  color: #000;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.3em;
 }
 
 /*# sourceMappingURL=styles.css.map */

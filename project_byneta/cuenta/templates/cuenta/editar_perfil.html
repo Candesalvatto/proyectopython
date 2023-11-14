@@ -1,40 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-    {% load static %}
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Assistant&family=Eczar&family=Martian+Mono:wght@100&family=Mulish:wght@300&family=Quicksand:wght@300&family=Roboto:wght@100&family=Satisfy&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-<link href="https://fonts.googleapis.com/css2?family=Assistant&family=Eczar&family=Martian+Mono:wght@100&family=Montserrat:wght@200;400&family=Mulish:wght@300&family=Quicksand:wght@300&family=Roboto:wght@100&family=Satisfy&display=swap" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="{% static 'cuenta/styles/styles.css' %}">
+{% extends 'template.html' %}
 
-    <title>By Neta</title>
-</head>
-<body>
-    <header class="header_loguin">
-        <nav class="nav">
-            <ul>
-                <li><a href= "{% url 'autobronceantes' %}">Autobronceado</a></li>
-                <li><a href= "{% url 'accesorios' %}">Accesorios</a></li>
-                <li class="logo"><a href= "{% url 'inicio' %}"><img src="../../static/assets/imgs/byneta_logo_black_800x.avif" alt="logo"></a></li>
-                <li><a href= "{% url 'brumas' %}">Brumas & Gloss </a></li>
-                <li><a href= "{% url 'manual' %}">Manual de uso</a></li>
-                {% if request.user.is_authenticated %} 
-                <li><a href= "{% url 'mi_perfil' %}" title="Perfil" class="">{{request.user.username}} ♡ </a></li>  
-                <a href="{% url 'cerrar_sesion' %}" title="Iniciar Sesion" class="material-symbols-outlined">logout</a>
-                <a href= "{% url 'carrito' %}" title="Carrito" class="material-symbols-outlined">shopping_bag</a>
-                {% else %}
-                <a href="{% url 'loguin' %}" title="Iniciar Sesion" class="material-symbols-outlined">person</a>
-                {% endif %}
-            </ul>
-        </nav> 
-    </header>
 
+{% block contenido %}
+    
+
+    
 
     {% block perfil %}
 <section class="formulario">
@@ -50,14 +20,5 @@
 </section>
 {% endblock perfil %}
 
+{% endblock contenido %}
 
-    <footer class="footer">
-        <div class="container_svg">
-        <img src="../../static/assets/imgs/estrella.png" alt="">
-        </div>
-        <h5 class="footer_h5"><a href= "{% url 'loguin' %}">ACCEDE A TU CUENTA PARA COMPRAR </a></h5>
-        <a href= "{% url 'registro' %}">¡Registrese ahora y empiece a disfrutar de nuestros productos!</a>
-        <span class="copy">Copyright 2023 || By Neta Beauty</span>
-    </footer> 
-</body>
-</html>

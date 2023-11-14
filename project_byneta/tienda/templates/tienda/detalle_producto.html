@@ -1,0 +1,32 @@
+{% extends 'template.html' %}
+
+    
+{% block contenido %}
+        <section class="detalle_producto">
+            <div class="producto">
+                <form method="POST" action="{% url 'agregar_al_carrito' producto.id %}" class="form_producto" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <img src="{{producto.imagen.url}}" alt="Producto">
+                   <h3>{{ producto.nombre }}</h3>
+                   <p>{{producto.descripcion}}</p>
+                   <span>$ {{ producto.precio }}</span>
+                   <button type="submit">COMPRAR</button>
+                   {% if  request.user.is_superuser %}
+                   <a href="{% url 'editar_producto' producto.id  %}">EDITAR PRODUCTO</a><br><br>
+                   {% endif %}
+                   {% with url_productos as url %}
+    <a href="{% url url %}">Volver</a>
+{% endwith %}
+            </form>
+
+
+            {% if  request.user.is_superuser %}
+            <form method="POST" action="{% url 'eliminar_producto' producto.id %}" class="form_eliminar_producto">
+                {% csrf_token %}
+                <input type="submit" value="Eliminar">
+            </form>            
+              {% endif %}
+            </div>
+
+        </section>
+{% endblock contenido %}

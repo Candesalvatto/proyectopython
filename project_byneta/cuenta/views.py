@@ -83,6 +83,9 @@ def editar_perfil(request):
         
     return render(request,'cuenta/editar_perfil.html', {'form': formulario})
 
+
+
+
 def mi_perfil(request):
     
     return render(request,'cuenta/mi_perfil.html', )

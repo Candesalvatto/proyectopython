@@ -102,32 +102,62 @@
   
     }
   }
-  .carrito{border: 1px solid pink;
+  .carrito{
     width: 100%;
+
+
+    span{font-family: 'Montserrat', sans-serif;
+        font-size: 1.2em;
+    color: #000;
+text-align: center;}
+
     
     .container_carrito{width: 60%;
-    border: 1px solid green;
-    background-color: #b33e24;
+
+    background-color: rgba(128, 128, 128, 0.164);
     margin: 50px auto;
     display: flex;
     flex-direction: column;
+
+
+
     
     
     .producto_carrito{
-        width: 50%;
-        border: 1px solid black;
-        background-color: #fff;
+        width: 90%;
+        display: flex;
+justify-content: space-between;
         text-align: center;
         margin: 20px auto;
+
+        .contenido{flex-direction: column;
+        margin: auto;
+    margin-right: 0;}
+        img{width: 250px;}
+        .cantidad{border: 1px solid #000;
+        width: 25%;
+margin: auto;
+color: #fff;
+background-color: #000;
+border-radius: 50px;}
+.nombre_producto{font-family: 'Montserrat', sans-serif;
+    font-size: 2em;
+color: #000;
+font-weight: 700;
+padding: 10px ;}
     
         p{font-family: 'Montserrat', sans-serif;
-            font-size: 1.2em;
+            font-size: 1.6em;
         color: #000;
+        font-weight: 700;
     padding: 10px ;}
     
-    buttom {font-family: 'Montserrat', sans-serif;
-            font-size: 0.9em;
-            color: red;}
+    input{font-family: 'Montserrat', sans-serif;
+            font-size: 1.2em;
+            color: red;
+        border: none;
+    background-color: transparent;
+padding: 30px;}
     
     
     }}}

@@ -6,21 +6,14 @@ from carrito.forms import FormularioCarrito, BuscarProductoCarrito, EditarProduc
 from django.views.generic import ListView, CreateView, DeleteView, UpdateView
 from django.urls import reverse_lazy
 from django.contrib.auth.decorators import login_required
+from datetime import date
 
 
-
-
-
-
-
-# def carrito(request, producto_id): 
-    
-#         carrito_items = Carrito.objects.filter(usuario=request.user, id=producto_id)
-#         return render(request, 'carrito/carrito.html', {'carrito_items': carrito_items})
     
 def carrito(request):
     carrito = Carrito.objects.filter(usuario=request.user)
-    return render(request, 'carrito.html', {'carrito': carrito})
+    return render(request, 'carrito.html', {'carrito': carrito, 'fecha': date.today()})
+
 
     
 @login_required   
