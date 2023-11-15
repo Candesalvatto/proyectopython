@@ -1,9 +1,0 @@
-setup.py
-mi_paquete_local/__init__.py
-mi_paquete_local/clientes.py
-mi_paquete_local/personas.py
-mi_paquete_local/tienda.py
-paquete_candela.egg-info/PKG-INFO
-paquete_candela.egg-info/SOURCES.txt
-paquete_candela.egg-info/dependency_links.txt
-paquete_candela.egg-info/top_level.txt

@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from django.template import loader
 from django.urls import reverse_lazy
@@ -8,6 +8,7 @@ from tienda.models import Producto
 from tienda.forms import FormularioAccesorios, FormularioAutobronceantes, FormularioBrumas, FormularioProducto
 from carrito.models import Carrito
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.decorators import login_required
 
 
 
@@ -68,12 +69,12 @@ def detalle_producto(request, producto_id):
 
     return render(request, 'tienda/detalle_producto.html', {'producto':producto, 'url_productos': url_productos})
 
-
+@login_required
 def agregar_al_carrito(request, producto_id):
     if not request.user.is_authenticated:
         return redirect('loguin')
     
-    producto = Producto.objects.get(id=producto_id)
+    producto = get_object_or_404(Producto, id=producto_id)
     print(producto)
     carrito, creado = Carrito.objects.get_or_create(
         usuario=request.user, producto= producto, nombre_producto=producto.nombre, precio=producto.precio, cantidad=1, imagen= producto.imagen)

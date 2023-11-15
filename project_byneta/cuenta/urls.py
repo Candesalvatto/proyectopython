@@ -7,7 +7,7 @@ from cuenta.views import registro, loguin, editar_perfil, mi_perfil, CambiarCont
 
 urlpatterns = [
     path('registrar/', registro, name='registro'),
-    path('ingresar/', loguin, name='loguin'),
+    path('loguin/', loguin, name='loguin'),
     path('cerrar_sesion/', LogoutView.as_view(template_name='inicio/index.html'), name='cerrar_sesion'),
     path('editar_perfil/', editar_perfil, name='editar_perfil'),
     path('mi_perfil/', mi_perfil, name='mi_perfil'),

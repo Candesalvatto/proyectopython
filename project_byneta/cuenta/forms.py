@@ -6,7 +6,7 @@ from django.forms.widgets import SelectDateWidget
 class FormularioRegistrar(UserCreationForm):         #formulario para class Cliente del models
     username = forms.CharField(label="", required=True, widget=forms.TextInput(attrs={'placeholder': 'Nombre de Usuario'}))
     email = forms.EmailField(label="", required=True, widget=forms.TextInput(attrs={'placeholder': 'Email'}))
-    password1= forms.CharField(label="", required=True, widget=forms.PasswordInput(attrs={'placeholder': 'Contraseña'}))
+    password1= forms.CharField(label="", required=True, widget=forms.PasswordInput(attrs={'placeholder': 'Contraseña (al menos 8 caracteres, alfanumérica)'}))
     password2= forms.CharField(label="", required=True, widget=forms.PasswordInput(attrs={'placeholder': 'Repetir Contraseña'}))
     
 

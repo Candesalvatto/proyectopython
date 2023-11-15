@@ -21,6 +21,7 @@
         <header class="header">
             <nav class="nav">
                 <ul>
+                    <li><a href= "{% url 'about_me' %}">Acerca de mi</a></li>
                     <li><a href= "{% url 'autobronceantes' %}">Autobronceado</a></li>
                     <li><a href= "{% url 'accesorios' %}">Accesorios</a></li>
                     <li class="logo"><a href= "{% url 'inicio' %}"><img src="../../static/carrito/assets/imgs/byneta_logo_black_800x.avif" alt="logo"></a></li>
@@ -40,7 +41,7 @@
     <body> 
 
 <section class="buscar_carrito">
-    <form action="{% url 'buscar_carrito' %}" method="GET">
+    <form action="{% url 'carrito' %}" method="GET">
         {% csrf_token %}
         <input type="text" name="producto" placeholder="Buscar Producto" value="{{ formulario_busqueda.producto.value }}">
         <button type="submit" class="search"><span class="material-symbols-outlined">
@@ -52,8 +53,9 @@
 
 
 
-{% if productos_carrito %}
+
    <section class="carrito">
+    {% if productos_carrito %}
        <div class="container_carrito">
            {% for producto in productos_carrito %}
            <div class="producto_carrito">
@@ -72,15 +74,18 @@
             </div>
            </div>
            {% endfor %}
-       </div>
 {% else %}
+
+
 {% if formulario_busqueda.producto.value and not productos_carrito %}
-        <span>NO HAY RESULTADOS DE SU BÚSQUEDA </span>
+        <p class="span">NO HAY RESULTADOS DE SU BÚSQUEDA </p>
     {% else %}
-        <span>SU CARRITO ESTA VACIO</span>
+        <p class="span">SU CARRITO ESTA VACIO</p>
     {% endif %}
+</div>
+{% endif  %} 
 </section> 
-{% endif %} 
+
     
 
 

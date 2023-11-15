@@ -10,11 +10,11 @@ class FormularioCarrito(forms.Form):         #formulario para class Cliente del 
         model = Carrito
         fields = ['usuario', 'producto', 'precio', 'cantidad', 'imagen']
     
-class BuscarProductoCarrito(forms.Form):
-    producto = forms.CharField(label="", required=False, widget=forms.TextInput(attrs={'placeholder': 'Buscar Producto'}))
+# class BuscarProductoCarrito(forms.Form):
+#     producto = forms.CharField(label="", required=False, widget=forms.TextInput(attrs={'placeholder': 'Buscar Producto'}))
 
     
-    class Meta:
-        model = Carrito
-        fields = [ 'producto']
+#     class Meta:
+#         model = Carrito
+#         fields = [ 'producto']
     

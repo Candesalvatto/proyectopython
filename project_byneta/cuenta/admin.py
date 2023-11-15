@@ -1,6 +1,6 @@
 from django.contrib import admin
-from cuenta.models import Usuario,  DatosExtra
+from cuenta.models import   DatosExtra
 
-admin.site.register(Usuario)
+
 admin.site.register(DatosExtra)
 

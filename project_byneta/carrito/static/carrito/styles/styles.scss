@@ -102,74 +102,85 @@
   
     }
   }
-  .carrito{
+  .carrito {
     width: 100%;
+ 
 
-
-    span{font-family: 'Montserrat', sans-serif;
-        font-size: 1.2em;
-    color: black;
-text-align: center;
-margin: auto;}
-
-    
-    .container_carrito{width: 60%;
-
-    background-color: rgba(128, 128, 128, 0.164);
-    margin: 50px auto;
-    display: flex;
-    flex-direction: column;
-
-
-
-    
-    
-    .producto_carrito{
-        width: 90%;
+    .container_carrito {
+        width: 60%;
+        background-color: rgba(128, 128, 128, 0.164);
+        margin: 50px auto;
         display: flex;
-justify-content: space-between;
-        text-align: center;
-        margin: 20px auto;
+        flex-direction: column;
+ 
+ 
+        .producto_carrito {
+            width: 90%;
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            margin: 20px auto;
+ 
+            .contenido {
+                flex-direction: column;
+                margin: auto;
+                margin-right: 0;
+            }
+ 
+            img {
+                width: 250px;
+            }
 
-        .contenido{flex-direction: column;
-        margin: auto;
-    margin-right: 0;}
-        img{width: 250px;}
-        .cantidad{border: 1px solid #000;
-        width: 25%;
-margin: auto;
-color: #fff;
-background-color: #000;
-border-radius: 50px;}
-.nombre_producto{font-family: 'Montserrat', sans-serif;
-    font-size: 2em;
-color: #000;
-font-weight: 700;
-padding: 10px ;}
-    
-        p{font-family: 'Montserrat', sans-serif;
-            font-size: 1.6em;
-        color: #000;
-        font-weight: 700;
-    padding: 10px ;}
-    
-    input{font-family: 'Montserrat', sans-serif;
-            font-size: 1.2em;
-            color: red;
-        border: none;
-    background-color: transparent;
-padding: 30px;
-font-weight: 600;
-text-shadow: 2px 2px rgba(255, 0, 0, 0.247);
-transition: transform 0.3s;
-cursor: pointer;
-&:hover{transform: scale(1.1)}}
-
-
+            span{                font-family: 'Montserrat', sans-serif;
+                font-size: 1.2em;
+                color: #000;
+            margin: auto;}
+ 
+            .cantidad {
+                border: 1px solid #000;
+                width: 25%;
+                margin: auto;
+                color: #fff;
+                background-color: #000;
+                border-radius: 50px;
+            }
+ 
+            .nombre_producto {
+                font-family: 'Montserrat', sans-serif;
+                font-size: 2em;
+                color: #000;
+                font-weight: 700;
+                padding: 10px;
+            }
+ 
+            p {
+                font-family: 'Montserrat', sans-serif;
+                font-size: 1.6em;
+                color: #000;
+                font-weight: 700;
+                padding: 10px;
+            }
+ 
+            input {
+                font-family: 'Montserrat', sans-serif;
+                font-size: 1.2em;
+                color: red;
+                border: none;
+                background-color: transparent;
+                padding: 30px;
+                font-weight: 600;
+                text-shadow: 2px 2px rgba(255, 0, 0, 0.247);
+                transition: transform 0.3s;
+                cursor: pointer;
+ 
+                &:hover {
+                   transform: scale(1.1);
+                }
+            }
+        }
     }
-    
-    
-    }}
+ }
+  
 
 
     /// formulario

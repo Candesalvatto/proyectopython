@@ -23,6 +23,7 @@ def registro(request):
         formulario = FormularioRegistrar(request.POST)
         if formulario.is_valid():
             formulario.save()
+            print('----------se ha registrado un usuario-----------')
             return redirect('loguin')
         else:
             print(formulario.errors)
@@ -107,8 +108,8 @@ def editar_perfil(request):
 
 
 def mi_perfil(request):
-    
-    return render(request,'cuenta/mi_perfil.html', )
+
+    return render(request,'cuenta/mi_perfil.html')
 
 # clase vasada en vista
 class CambiarContrasena(LoginRequiredMixin, PasswordChangeView):

@@ -81,13 +81,6 @@
 .carrito {
   width: 100%;
 }
-.carrito span {
-  font-family: "Montserrat", sans-serif;
-  font-size: 1.2em;
-  color: black;
-  text-align: center;
-  margin: auto;
-}
 .carrito .container_carrito {
   width: 60%;
   background-color: rgba(128, 128, 128, 0.164);
@@ -109,6 +102,12 @@
 }
 .carrito .container_carrito .producto_carrito img {
   width: 250px;
+}
+.carrito .container_carrito .producto_carrito span {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2em;
+  color: #000;
+  margin: auto;
 }
 .carrito .container_carrito .producto_carrito .cantidad {
   border: 1px solid #000;
