@@ -1,14 +1,15 @@
 from django.shortcuts import render, redirect
 from django.template import loader
 from django.http import HttpResponse
-from cuenta.forms import FormularioRegistrar, FormularioEdicionPerfil, FormularioEdicionContrasena
-from cuenta.models import  DatosExtra
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
 from django.contrib.auth.views import PasswordChangeView
 from django.urls import reverse_lazy
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
+from cuenta.forms import FormularioRegistrar, FormularioEdicionPerfil, FormularioEdicionContrasena
+from cuenta.models import  DatosExtra
+
 
 
 

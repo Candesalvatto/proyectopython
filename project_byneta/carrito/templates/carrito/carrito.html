@@ -41,6 +41,7 @@
     <body> 
 
 <section class="buscar_carrito">
+
     <form action="{% url 'carrito' %}" method="GET">
         {% csrf_token %}
         <input type="text" name="producto" placeholder="Buscar Producto" value="{{ formulario_busqueda.producto.value }}">
@@ -74,14 +75,12 @@
             </div>
            </div>
            {% endfor %}
+
 {% else %}
 
+<p class="span">SU CARRITO ESTA VACIO</p>
 
-{% if formulario_busqueda.producto.value and not productos_carrito %}
-        <p class="span">NO HAY RESULTADOS DE SU BÚSQUEDA </p>
-    {% else %}
-        <p class="span">SU CARRITO ESTA VACIO</p>
-    {% endif %}
+
 </div>
 {% endif  %} 
 </section> 

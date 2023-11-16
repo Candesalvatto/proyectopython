@@ -368,20 +368,4 @@
   height: auto;
 }
 
-.span {
-  border: 1px solid #B33E24;
-  width: 100%;
-}
-.span .div_span {
-  width: 80%;
-  border: 1px solid green;
-  margin: auto;
-}
-.span .div_span h1 {
-  font-family: "Montserrat", sans-serif;
-  font-size: 5em;
-  color: #B33E24;
-  text-align: center;
-}
-
 /*# sourceMappingURL=styles.css.map */

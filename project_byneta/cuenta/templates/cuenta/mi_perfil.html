@@ -28,7 +28,11 @@
            <p>Pais: {{ user.datosextra.pais }}</p>
            <p>Telefono: {{ user.datosextra.telefono }}</p>
            <p>Avatar:
-             <img src="{{ request.user.datosextra.avatar.url }}"  alt="avatar">
+            {% if request.user.datosextra.avatar %}
+            <img src="{{ request.user.datosextra.avatar.url }}" alt="avatar">
+          {% else %}
+            <p>No avatar available</p>
+          {% endif %}
             </p>
             <hr>
        </div>
