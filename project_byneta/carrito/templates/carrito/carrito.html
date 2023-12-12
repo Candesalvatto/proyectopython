@@ -1,4 +1,59 @@
-<!DOCTYPE html>
+{% extends 'template.html' %}
+
+
+{% block contenido %}
+
+<section class="buscar_carrito">
+
+    <form action="{% url 'carrito' %}" method="GET">
+        {% csrf_token %}
+        <input type="text" name="producto" placeholder="Buscar Producto" value="{{ formulario_busqueda.producto.value }}">
+        <button type="submit" class="search"><span class="material-symbols-outlined">
+            search
+            </span></button>
+    </form>
+        
+</section>
+
+
+
+
+   <section class="carrito">
+    {% if productos_carrito %}
+       <div class="container_carrito">
+           {% for producto in productos_carrito %}
+           <div class="producto_carrito">
+            <div class="url">
+            <img src="{{ producto.imagen.url }}"  alt="producto">
+        </div>
+        <div class="contenido">
+            <span>Agregado al carrito el día {{producto.fecha|date:"d/m/Y" }}</span>
+               <p class="nombre_producto">{{producto.nombre_producto}}</p>
+               <p> ${{producto.precio}}</p>
+               <p class="cantidad"> {{producto.cantidad}}</p>
+               <form method="post" action="{% url 'eliminar-carrito' producto.id %}">
+                  {% csrf_token %}
+                  <input type="submit" value="Eliminar">
+               </form>
+            </div>
+           </div>
+           {% endfor %}
+
+{% else %}
+
+<p class="span">SU CARRITO ESTA VACIO</p>
+
+
+</div>
+{% endif  %} 
+</section> 
+
+
+    
+{% endblock contenido %}
+    
+
+{% comment %} <!DOCTYPE html>
 <html lang="en">
     {% load static %}
 <head>
@@ -98,4 +153,4 @@
         </footer> 
 
 </body>
-</html>
+</html> {% endcomment %}

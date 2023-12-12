@@ -1,4 +1,93 @@
-<!DOCTYPE html>
+{% extends 'template.html' %}
+
+
+{% block contenido %}
+
+<style>
+    .header_loguin {
+        background-image: url(../../static/inicio/assets/imgs/banner3.jpg);
+        background-size: cover;
+        height: 700px;
+    }
+    </style>
+    
+<section class="index_1">
+    <div class="index_gloss">
+            <div class="index_gloss_1">
+            <h1>I'M OBSESSED - Juicy Lip Oil</h1>
+            <p>Aceite labial nutritivo</p>
+            <form method="get" action="{% url 'brumas' %}">
+                <button type="submit">COMPRAR</button>
+            </form>
+            </div>
+        <img src="../../static/inicio/assets/imgs/glosslip2.jpg" alt="">
+    </div>
+</section>
+
+
+
+
+<div class="divider"></div>
+
+
+<section class="banner_registro">
+<div class="div_registro">
+    <img src="../../static/inicio/assets/imgs/imgfondo3 (2).jpg">
+    <a href= "{% url 'registro' %}">REGISTRATE PARA ACCEDER AL CARRITO</a>
+</div>
+</section>
+
+
+<div class="divider"></div>
+
+
+<section class="best_seller">
+    <h4>BEST SELLER</h4>
+    <div class="container">
+        <a class="photo" href="https://www.instagram.com/byneta_beauty/">
+            <img src="../../static/inicio/assets/imgs/self_tanning_1440x.webp" alt="">
+        </a>
+        </a>
+        <a class="photo" href="https://www.instagram.com/byneta_beauty/">
+            <img src="../../static/inicio/assets/imgs/3-Mist_Tanning_Oil_copy_1440x.webp" alt="">
+        </a>
+        <a class="photo" href="https://www.instagram.com/byneta_beauty/">
+            <img src="../../static/inicio/assets/imgs/1-Face_Body_Makeup_1440x.webp" alt="">
+        </a>
+    </div>
+</section>
+
+
+<section class="utilizacion">
+    <div class="container_util1">
+        <img src="../../static/inicio/assets/imgs/Artboard_15_1_1440x.webp" alt="">
+        <div class="container_util">
+            <h2>¿CÓMO UTILIZAR?</h2>
+            <p> Te mostramos la mejor manera de utilizar nuestros productos</p>
+            <!-- <button>VER</button> -->
+            <form method="get" action="{% url 'manual' %}">
+                <button type="submit">VER</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+
+<div class="divider"></div>
+
+
+<section class="follow_us">
+    <h5>SIGUENOS   <a href="https://www.instagram.com/byneta_beauty/">@byneta_beauty</a></h5>
+    <a href="https://www.instagram.com/byneta_beauty/"><img src="../../static/inicio/assets/imgs/collagefollow.jpg" alt=""></a>
+</section>
+
+<div class="divider"></div>
+
+{% endblock contenido %}
+    
+
+
+{% comment %} <!DOCTYPE html>
 <html lang="en">
     {% load static %}
 
@@ -122,4 +211,4 @@
         </footer> 
 
 </body>
-</html>
+</html> {% endcomment %}

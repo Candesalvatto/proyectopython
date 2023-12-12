@@ -56,6 +56,8 @@ def loguin(request):
 
 
 
+
+
 @login_required
 def editar_perfil(request):
     datos_extra, created = DatosExtra.objects.get_or_create(user=request.user)

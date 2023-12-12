@@ -362,4 +362,466 @@
   text-align: center;
 }
 
+.colocacion {
+  width: 100%;
+  margin-top: -200px;
+}
+.colocacion .container_all {
+  display: flex;
+  flex-direction: row;
+}
+.colocacion .container_all .container_manual {
+  text-align: right;
+  margin: auto;
+  width: 40%;
+}
+.colocacion .container_all .container_manual h4 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 3em;
+}
+.colocacion .container_all .container_manual p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8em;
+  padding: 20px;
+}
+.colocacion .container_all .container_manual_img {
+  border: 1px solid floralwhite;
+  width: 50%;
+}
+.colocacion .container_all .container_manual_img img {
+  width: 100%;
+}
+
+.videos {
+  width: 80%;
+  margin: 80px auto;
+  justify-content: center;
+  text-align: center;
+}
+.videos h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.8em;
+  color: #000;
+  margin: 50px;
+}
+.videos h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5em;
+  color: #000;
+  margin-top: 30px;
+}
+.videos p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1em;
+  color: #000;
+  padding: 20px;
+}
+
+.about_me {
+  width: 100%;
+  margin-top: -150px;
+}
+.about_me .container_aboutme {
+  width: 100%;
+  display: flex;
+}
+.about_me .container_aboutme .container_imagen {
+  width: 50%;
+}
+.about_me .container_aboutme .container_imagen img {
+  width: 100%;
+}
+.about_me .container_aboutme .container_escrito {
+  margin: 15px;
+  width: 50%;
+}
+.about_me .container_aboutme .container_escrito h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 3.2em;
+  color: #000;
+  text-align: center;
+  margin: 60px auto;
+}
+.about_me .container_aboutme .container_escrito h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2em;
+  color: #000;
+  margin: 10px auto 30px auto;
+  text-align: center;
+}
+.about_me .container_aboutme .container_escrito p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1em;
+  color: #000;
+}
+.about_me .container_aboutme .container_escrito li {
+  list-style: none;
+  padding: 10px;
+}
+
+.header_about {
+  width: 100%;
+  background-size: cover;
+  height: 50px;
+}
+.header_about .nav {
+  width: 100%;
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.4784313725);
+}
+.header_about .nav ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+.header_about .nav ul a {
+  text-decoration: none;
+  color: #000;
+  padding-left: 20px;
+}
+.header_about .nav ul li {
+  font-size: 2em;
+  margin: 0 30px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1em;
+}
+.header_about .nav ul li a {
+  text-decoration: none;
+  color: #000;
+}
+.header_about .nav ul .logo img {
+  width: 300px;
+}
+
+.redes {
+  margin: 40px auto;
+}
+.redes .container_redes {
+  background-color: #000;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.redes .container_redes img {
+  width: 400px;
+}
+
+.neta {
+  width: 100%;
+  margin: 20px auto;
+}
+.neta .img_neta {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  overflow-x: auto;
+}
+.neta .img_neta img {
+  width: 400px;
+  height: auto;
+}
+
+.best_seller {
+  background-color: #fff;
+  width: 95%;
+  margin: 0 auto 80px auto;
+}
+.best_seller h4 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 3em;
+  text-align: left;
+  margin-left: 40px;
+  color: #B33E24;
+}
+.best_seller h4 a {
+  text-decoration: none;
+  color: #000;
+}
+.best_seller .container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin: auto;
+}
+.best_seller .container img {
+  width: 100%;
+  padding: 20px 20px;
+}
+
+.index_1 {
+  margin: 30px auto;
+  width: 70%;
+}
+.index_1 .index_gloss {
+  margin: 20px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.index_1 .index_gloss img {
+  width: 50%;
+}
+.index_1 .index_gloss .index_gloss_1 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.index_1 .index_gloss .index_gloss_1 h1 {
+  font-family: "Montserrat", sans-serif;
+  color: #000;
+  font-size: 2.3em;
+  width: 100%;
+  text-align: left;
+}
+.index_1 .index_gloss .index_gloss_1 p {
+  font-family: "Montserrat", sans-serif;
+  color: #000;
+  font-size: 1em;
+  padding: 20px;
+  text-align: center;
+}
+.index_1 .index_gloss .index_gloss_1 form {
+  margin: auto;
+  text-align: center;
+  width: 100%;
+}
+.index_1 .index_gloss .index_gloss_1 form button {
+  border: 1px solid #000;
+  padding: 10px 50px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1em;
+  color: #000;
+  background-color: transparent;
+  border-radius: 20px;
+  width: 50%;
+  margin: auto;
+}
+.index_1 .index_gloss .index_gloss_1 form button:hover {
+  background-color: black;
+  transition-duration: 0.8s;
+  color: #fff;
+}
+
+.utilizacion {
+  width: 100%;
+  margin: auto;
+  background-color: rgba(128, 128, 128, 0.164);
+}
+.utilizacion .container_util1 {
+  background-color: #fff;
+  border-radius: 20px;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+}
+.utilizacion .container_util1 img {
+  width: 100%;
+  border-radius: 20px 0px 0px 20px;
+}
+.utilizacion .container_util {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.utilizacion .container_util h2 {
+  font-family: "Montserrat", sans-serif;
+  color: #000;
+  font-size: 2em;
+}
+.utilizacion .container_util p {
+  font-family: "Montserrat", sans-serif;
+  color: #000;
+  font-size: 1em;
+  padding: 20px;
+}
+.utilizacion .container_util button {
+  border: 1px solid #000;
+  padding: 10px 50px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1em;
+  color: #000;
+  background-color: transparent;
+  border-radius: 20px;
+}
+.utilizacion .container_util button:hover {
+  background-color: black;
+  transition-duration: 0.8s;
+  color: #fff;
+}
+
+.divider {
+  width: 100%;
+  height: 250px;
+}
+
+.follow_us {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.follow_us h5 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2em;
+  color: #000;
+  padding-bottom: 20px;
+}
+.follow_us h5 a {
+  text-decoration: none;
+  color: #000;
+}
+
+.banner_registro {
+  width: 100%;
+}
+.banner_registro .div_registro {
+  width: 70%;
+  margin: auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.banner_registro .div_registro img {
+  width: 100%;
+}
+.banner_registro .div_registro a {
+  color: white;
+  text-decoration: none;
+  text-shadow: 2px 2px 4px #000000;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.7em;
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.carrito {
+  width: 100%;
+}
+.carrito .container_carrito {
+  width: 60%;
+  background-color: rgba(128, 128, 128, 0.164);
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+}
+.carrito .container_carrito .producto_carrito {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  margin: 20px auto;
+}
+.carrito .container_carrito .producto_carrito .contenido {
+  flex-direction: column;
+  margin: auto;
+  margin-right: 0;
+}
+.carrito .container_carrito .producto_carrito img {
+  width: 250px;
+}
+.carrito .container_carrito .producto_carrito span {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2em;
+  color: #000;
+  margin: auto;
+}
+.carrito .container_carrito .producto_carrito .cantidad {
+  border: 1px solid #000;
+  width: 25%;
+  margin: auto;
+  color: #fff;
+  background-color: #000;
+  border-radius: 50px;
+}
+.carrito .container_carrito .producto_carrito .nombre_producto {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2em;
+  color: #000;
+  font-weight: 700;
+  padding: 10px;
+}
+.carrito .container_carrito .producto_carrito p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.6em;
+  color: #000;
+  font-weight: 700;
+  padding: 10px;
+}
+.carrito .container_carrito .producto_carrito input {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2em;
+  color: red;
+  border: none;
+  background-color: transparent;
+  padding: 30px;
+  font-weight: 600;
+  text-shadow: 2px 2px rgba(255, 0, 0, 0.247);
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+.carrito .container_carrito .producto_carrito input:hover {
+  transform: scale(1.1);
+}
+
+.buscar_carrito {
+  width: 100%;
+  margin: 20px auto;
+  padding-top: 30px;
+}
+.buscar_carrito form {
+  width: 50%;
+  margin: auto;
+  display: flex;
+}
+.buscar_carrito form button {
+  border: none;
+  margin-left: 20px;
+  background-color: transparent;
+}
+.buscar_carrito input {
+  margin: 10px auto;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8em;
+  padding-left: 10px;
+  list-style: none;
+  border: 1px solid #000;
+  width: 100%;
+  height: 40px;
+}
+.buscar_carrito .search span {
+  border: 1px solid black;
+  border-radius: 50px;
+  padding: 10px;
+}
+.buscar_carrito .search span:hover {
+  background-color: black;
+  transition-duration: 0.3s;
+  color: #fff;
+}
+
+.mensajes {
+  border: 2px solid greenyellow;
+  width: 100%;
+  height: 200px;
+}
+.mensajes .content_mensajes {
+  width: 80%;
+  margin: auto;
+  height: 100px;
+  background-color: rgba(128, 128, 128, 0.164);
+}
+
 /*# sourceMappingURL=styles.css.map */
